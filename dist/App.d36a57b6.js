@@ -43053,7 +43053,11 @@ if ("development" !== 'production' && "development" !== 'test' && typeof window 
 
 var _default = styled;
 exports.default = _default;
-},{"stylis/stylis.min":"../node_modules/stylis/stylis.min.js","stylis-rule-sheet":"../node_modules/stylis-rule-sheet/index.js","react":"../node_modules/react/index.js","@emotion/unitless":"../node_modules/@emotion/unitless/dist/unitless.browser.esm.js","react-is":"../node_modules/react-is/index.js","memoize-one":"../node_modules/memoize-one/dist/memoize-one.esm.js","prop-types":"../node_modules/prop-types/index.js","react-dom":"../node_modules/react-dom/index.js","@emotion/is-prop-valid":"../node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","process":"../node_modules/process/browser.js"}],"components/carousel/styles.js":[function(require,module,exports) {
+},{"stylis/stylis.min":"../node_modules/stylis/stylis.min.js","stylis-rule-sheet":"../node_modules/stylis-rule-sheet/index.js","react":"../node_modules/react/index.js","@emotion/unitless":"../node_modules/@emotion/unitless/dist/unitless.browser.esm.js","react-is":"../node_modules/react-is/index.js","memoize-one":"../node_modules/memoize-one/dist/memoize-one.esm.js","prop-types":"../node_modules/prop-types/index.js","react-dom":"../node_modules/react-dom/index.js","@emotion/is-prop-valid":"../node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","process":"../node_modules/process/browser.js"}],"../public/images/ArrowLeft.png":[function(require,module,exports) {
+module.exports = "/ArrowLeft.99d86069.png";
+},{}],"../public/images/ArrowRight.png":[function(require,module,exports) {
+module.exports = "/ArrowRight.0c847330.png";
+},{}],"components/carousel/styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43066,7 +43070,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 200px;\n  margin: 67px auto;\n  .show-larger {\n    display: flex;\n    justify-content: center;\n    color: #999;\n    font-family: Helvetica, sans-serif;\n    margin-bottom: 20px;\n  }\n  .show-larger svg {\n    font-size: 19px;\n    font-weight: lighter;\n    margin-right: 11px;\n    cursor: pointer;\n  }\n  .show-larger p {\n    margin: 0;\n    font-size: 14.5px;\n  }\n  .slider-control-bottomcenter {\n    display: none;\n  }\n  .slider-control-centerright {\n    right: -60px !important;\n  }\n  .slider-control-centerleft {\n    left: -60px !important;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 200px;\n  margin: 67px auto;\n  .show-larger {\n    display: flex;\n    justify-content: center;\n    color: #999;\n    font-family: Helvetica, sans-serif;\n    margin-bottom: 20px;\n  }\n  .show-larger svg {\n    font-size: 19px;\n    font-weight: lighter;\n    margin-right: 11px;\n    cursor: pointer;\n  }\n  .show-larger p {\n    margin: 0;\n    font-size: 14.5px;\n  }\n  .slider-control-bottomcenter {\n    display: none;\n  }\n  .slider-control-centerright {\n    right: -60px !important;\n  }\n  .slider-control-centerleft {\n    left: -60px !important;\n  }\n  .slider-control-centerright button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n  .slider-control-centerleft button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -43077,10 +43081,14 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var CarouselArea = _styledComponents.default.section(_templateObject());
+var arrowLeft = require("../../../public/images/ArrowLeft.png");
+
+var arrowRight = require("../../../public/images/ArrowRight.png");
+
+var CarouselArea = _styledComponents.default.section(_templateObject(), arrowRight, arrowLeft);
 
 exports.CarouselArea = CarouselArea;
-},{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/carousel/Carousel.js":[function(require,module,exports) {
+},{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../public/images/ArrowLeft.png":"../public/images/ArrowLeft.png","../../../public/images/ArrowRight.png":"../public/images/ArrowRight.png"}],"components/carousel/Carousel.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43487,7 +43495,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60660" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53204" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

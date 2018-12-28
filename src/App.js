@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSearchPlus,
   faStar,
-  faAngleRight,
-  faAngleLeft,
   faTag,
   faPlusCircle,
   faMinusCircle
@@ -16,15 +14,7 @@ import RetailCarousel from "./components/carousel/Carousel";
 import Highlights from "./components/highlights/Highlights";
 import * as Styled from "./styles";
 
-library.add(
-  faSearchPlus,
-  faStar,
-  faAngleRight,
-  faAngleLeft,
-  faTag,
-  faPlusCircle,
-  faMinusCircle
-);
+library.add(faSearchPlus, faStar, faTag, faPlusCircle, faMinusCircle);
 class App extends React.Component {
   state = { loading: true, productData };
 

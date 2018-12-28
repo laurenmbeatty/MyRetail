@@ -1,4 +1,6 @@
 import styled from "styled-components";
+const arrowLeft = require("../../../public/images/ArrowLeft.png");
+const arrowRight = require("../../../public/images/ArrowRight.png");
 
 export const CarouselArea = styled.section`
   width: 200px;
@@ -28,5 +30,21 @@ export const CarouselArea = styled.section`
   }
   .slider-control-centerleft {
     left: -60px !important;
+  }
+  .slider-control-centerright button {
+    background: #fff url(${arrowRight}) no-repeat center !important;
+    color: #fff !important;
+    &:focus {
+      outline: none;
+    }
+    font-size: 0;
+  }
+  .slider-control-centerleft button {
+    background: #fff url(${arrowLeft}) no-repeat center !important;
+    color: #fff !important;
+    &:focus {
+      outline: none;
+    }
+    font-size: 0;
   }
 `;
