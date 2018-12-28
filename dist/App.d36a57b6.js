@@ -31172,21 +31172,31 @@ function (_React$Component) {
   _inherits(RetailCarousel, _React$Component);
 
   function RetailCarousel() {
+    var _this;
+
     _classCallCheck(this, RetailCarousel);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(RetailCarousel).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(RetailCarousel).apply(this, arguments));
+    _this.state = {
+      wrapAround: true,
+      slidesToShow: 3
+    };
+    return _this;
   }
 
   _createClass(RetailCarousel, [{
     key: "render",
     value: function render() {
       var images = this.props.images;
-      return _react.default.createElement(_nukaCarousel.default, null, images.map(function (image, index) {
+      return _react.default.createElement(_nukaCarousel.default, {
+        slidesToShow: this.state.slidesToShow,
+        wrapAround: this.state.wrapAround
+      }, images.map(function (image, index) {
         return _react.default.createElement("img", {
           src: image.image,
           key: index,
           index: index,
-          alt: "`alternate-${index}`"
+          alt: "ninja-blender-".concat(index + 1)
         });
       }));
     }
@@ -31271,7 +31281,10 @@ function (_React$Component) {
         className: "main"
       }, _react.default.createElement("div", {
         className: "col-1"
-      }, _react.default.createElement("h1", null, productData.title), _react.default.createElement(_Carousel.default, {
+      }, _react.default.createElement("h1", null, productData.title), _react.default.createElement("img", {
+        src: productData.Images[0].PrimaryImage[0].image,
+        alt: "Ninja Blender"
+      }), _react.default.createElement(_Carousel.default, {
         images: productData.Images[0].AlternateImages
       })), _react.default.createElement("div", {
         className: "col-2"
@@ -31310,7 +31323,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51911" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55248" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

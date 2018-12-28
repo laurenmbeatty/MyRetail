@@ -20,6 +20,10 @@ class App extends React.Component {
       <div className="main">
         <div className="col-1">
           <h1>{productData.title}</h1>
+          <img
+            src={productData.Images[0].PrimaryImage[0].image}
+            alt="Ninja Blender"
+          />
           <RetailCarousel images={productData.Images[0].AlternateImages} />
         </div>
         <div className="col-2">
