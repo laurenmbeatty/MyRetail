@@ -1,11 +1,30 @@
 import React from "react";
 import { render } from "react-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSearchPlus,
+  faStar,
+  faAngleRight,
+  faAngleLeft,
+  faTag,
+  faPlusCircle,
+  faMinusCircle
+} from "@fortawesome/free-solid-svg-icons";
 import productData from "./item-data";
 import RetailCarousel from "./components/carousel/Carousel";
 import Highlights from "./components/highlights/Highlights";
-
 import * as Styled from "./styles";
 
+library.add(
+  faSearchPlus,
+  faStar,
+  faAngleRight,
+  faAngleLeft,
+  faTag,
+  faPlusCircle,
+  faMinusCircle
+);
 class App extends React.Component {
   state = { loading: true, productData };
 

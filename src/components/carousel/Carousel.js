@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "nuka-carousel";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Styled from "./styles";
 
 class RetailCarousel extends React.Component {
@@ -19,6 +19,10 @@ class RetailCarousel extends React.Component {
     const { images } = this.props;
     return (
       <Styled.CarouselArea>
+        <div className="show-larger">
+          <FontAwesomeIcon icon="search-plus" />
+          <p>view larger</p>
+        </div>
         <Carousel
           slidesToShow={this.state.slidesToShow}
           wrapAround={this.state.wrapAround}
