@@ -7,7 +7,8 @@ export const Offers = styled.ul`
   padding-left: 0;
   font-family: Helvetica, sans-serif;
   font-size: 18px;
-  line-height: 32px;
+  line-height: 1.3;
+  letter-spacing: -0.4px;
   color: #cc0000;
   list-style: none;
   text-transform: lowercase;

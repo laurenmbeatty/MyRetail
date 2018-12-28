@@ -13,6 +13,7 @@ import productData from "./item-data";
 import RetailCarousel from "./components/carousel/Carousel";
 import Highlights from "./components/highlights/Highlights";
 import Offers from "./components/offers/Offers";
+import Order from "./components/order/Order";
 import * as Styled from "./styles";
 
 library.add(faSearchPlus, faStar, faTag, faPlusCircle, faMinusCircle);
@@ -49,6 +50,7 @@ class App extends React.Component {
             </span>
           </Styled.Price>
           <Offers offers={productData.Promotions} />
+          <Order available={productData.purchasingChannelCode} />
           <Highlights highlights={productData.ItemDescription[0].features} />
         </Styled.ColTwo>
       </Styled.Main>

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const HighlightsTitle = styled.h2`
-  margin: 0 0 20px 0;
+  margin: 20px 0 20px 0;
   font-family: Helvetica, sans-serif;
   font-size: 36px;
+  font-weight: 400
   line-height: 50px;
   color: #333;
 `;
