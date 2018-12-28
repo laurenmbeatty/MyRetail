@@ -12,6 +12,7 @@ import {
 import productData from "./item-data";
 import RetailCarousel from "./components/carousel/Carousel";
 import Highlights from "./components/highlights/Highlights";
+import Offers from "./components/offers/Offers";
 import * as Styled from "./styles";
 
 library.add(faSearchPlus, faStar, faTag, faPlusCircle, faMinusCircle);
@@ -39,6 +40,15 @@ class App extends React.Component {
           <RetailCarousel images={productData.Images[0].AlternateImages} />
         </Styled.ColOne>
         <Styled.ColTwo>
+          <Styled.Price>
+            <span className="formatted-price">
+              {productData.Offers[0].OfferPrice[0].formattedPriceValue}
+            </span>
+            <span className="price-qualifier">
+              {productData.Offers[0].OfferPrice[0].priceQualifier}
+            </span>
+          </Styled.Price>
+          <Offers offers={productData.Promotions} />
           <Highlights highlights={productData.ItemDescription[0].features} />
         </Styled.ColTwo>
       </Styled.Main>

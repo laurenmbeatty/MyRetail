@@ -41,3 +41,23 @@ export const MainImage = styled.img`
   display: block;
   margin: 0 auto;
 `;
+
+export const Price = styled.div`
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 35px;
+  .formatted-price {
+    font-size: 30.5px;
+    font-weight: bold;
+    line-height: 0.44;
+    color: #000;
+    padding-right: 6px;
+  }
+  .price-qualifier {
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    line-height: 2.46;
+    text-transform: lowercase;
+  }
+`;

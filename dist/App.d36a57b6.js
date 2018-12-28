@@ -43286,17 +43286,134 @@ function (_React$Component) {
 
 var _default = Highlights;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./styles":"components/highlights/styles.js"}],"styles.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./styles":"components/highlights/styles.js"}],"components/offers/styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.MainImage = exports.ColTwo = exports.ColOne = exports.Main = exports.MainTitle = void 0;
+exports.Offers = exports.Rule = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  padding-left: 0;\n  font-family: Helvetica, sans-serif;\n  font-size: 18px;\n  line-height: 32px;\n  color: #cc0000;\n  list-style: none;\n  text-transform: lowercase;\n  svg {\n    font-size: 13px;\n    padding-right: 9px;\n  }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  color: #ccc;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Rule = _styledComponents.default.hr(_templateObject());
+
+exports.Rule = Rule;
+
+var Offers = _styledComponents.default.ul(_templateObject2());
+
+exports.Offers = Offers;
+},{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/offers/Offers.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var Styled = _interopRequireWildcard(require("./styles"));
+
+var _reactFontawesome = require("@fortawesome/react-fontawesome");
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var Offers =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Offers, _React$Component);
+
+  function Offers() {
+    _classCallCheck(this, Offers);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Offers).apply(this, arguments));
+  }
+
+  _createClass(Offers, [{
+    key: "render",
+    value: function render() {
+      var offers = this.props.offers;
+      return _react.default.createElement("div", null, _react.default.createElement(Styled.Rule, null), _react.default.createElement(Styled.Offers, null, offers.map(function (offer, index) {
+        return _react.default.createElement("li", {
+          key: index
+        }, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
+          icon: "tag"
+        }), _react.default.createElement("span", null, offer.Description[0].shortDescription));
+      })), _react.default.createElement(Styled.Rule, null));
+    }
+  }]);
+
+  return Offers;
+}(_react.default.Component);
+
+var _default = Offers;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./styles":"components/offers/styles.js","@fortawesome/react-fontawesome":"../node_modules/@fortawesome/react-fontawesome/index.es.js"}],"styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Price = exports.MainImage = exports.ColTwo = exports.ColOne = exports.Main = exports.MainTitle = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  font-family: Arial, Helvetica, sans-serif;\n  margin-bottom: 35px;\n  .formatted-price {\n    font-size: 30.5px;\n    font-weight: bold;\n    line-height: 0.44;\n    color: #000;\n    padding-right: 6px;\n  }\n  .price-qualifier {\n    font-size: 12px;\n    font-weight: 400;\n    color: #666;\n    line-height: 2.46;\n    text-transform: lowercase;\n  }\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject5() {
   var data = _taggedTemplateLiteral(["\n  display: block;\n  margin: 0 auto;\n"]);
@@ -43369,6 +43486,10 @@ exports.ColTwo = ColTwo;
 var MainImage = _styledComponents.default.img(_templateObject5());
 
 exports.MainImage = MainImage;
+
+var Price = _styledComponents.default.div(_templateObject6());
+
+exports.Price = Price;
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
@@ -43387,6 +43508,8 @@ var _itemData = _interopRequireDefault(require("./item-data"));
 var _Carousel = _interopRequireDefault(require("./components/carousel/Carousel"));
 
 var _Highlights = _interopRequireDefault(require("./components/highlights/Highlights"));
+
+var _Offers = _interopRequireDefault(require("./components/offers/Offers"));
 
 var Styled = _interopRequireWildcard(require("./styles"));
 
@@ -43412,7 +43535,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-_fontawesomeSvgCore.library.add(_freeSolidSvgIcons.faSearchPlus, _freeSolidSvgIcons.faStar, _freeSolidSvgIcons.faAngleRight, _freeSolidSvgIcons.faAngleLeft, _freeSolidSvgIcons.faTag, _freeSolidSvgIcons.faPlusCircle, _freeSolidSvgIcons.faMinusCircle);
+_fontawesomeSvgCore.library.add(_freeSolidSvgIcons.faSearchPlus, _freeSolidSvgIcons.faStar, _freeSolidSvgIcons.faTag, _freeSolidSvgIcons.faPlusCircle, _freeSolidSvgIcons.faMinusCircle);
 
 var App =
 /*#__PURE__*/
@@ -43458,7 +43581,13 @@ function (_React$Component) {
         alt: "Ninja Blender"
       }), _react.default.createElement(_Carousel.default, {
         images: productData.Images[0].AlternateImages
-      })), _react.default.createElement(Styled.ColTwo, null, _react.default.createElement(_Highlights.default, {
+      })), _react.default.createElement(Styled.ColTwo, null, _react.default.createElement(Styled.Price, null, _react.default.createElement("span", {
+        className: "formatted-price"
+      }, productData.Offers[0].OfferPrice[0].formattedPriceValue), _react.default.createElement("span", {
+        className: "price-qualifier"
+      }, productData.Offers[0].OfferPrice[0].priceQualifier)), _react.default.createElement(_Offers.default, {
+        offers: productData.Promotions
+      }), _react.default.createElement(_Highlights.default, {
         highlights: productData.ItemDescription[0].features
       }))) : null;
     }
@@ -43468,7 +43597,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 (0, _reactDom.render)(_react.default.createElement(App, null), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","@fortawesome/fontawesome-svg-core":"../node_modules/@fortawesome/fontawesome-svg-core/index.es.js","@fortawesome/react-fontawesome":"../node_modules/@fortawesome/react-fontawesome/index.es.js","@fortawesome/free-solid-svg-icons":"../node_modules/@fortawesome/free-solid-svg-icons/index.es.js","./item-data":"item-data.js","./components/carousel/Carousel":"components/carousel/Carousel.js","./components/highlights/Highlights":"components/highlights/Highlights.js","./styles":"styles.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","@fortawesome/fontawesome-svg-core":"../node_modules/@fortawesome/fontawesome-svg-core/index.es.js","@fortawesome/react-fontawesome":"../node_modules/@fortawesome/react-fontawesome/index.es.js","@fortawesome/free-solid-svg-icons":"../node_modules/@fortawesome/free-solid-svg-icons/index.es.js","./item-data":"item-data.js","./components/carousel/Carousel":"components/carousel/Carousel.js","./components/highlights/Highlights":"components/highlights/Highlights.js","./components/offers/Offers":"components/offers/Offers.js","./styles":"styles.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -43495,7 +43624,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53204" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59243" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
