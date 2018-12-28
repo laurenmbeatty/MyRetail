@@ -2,6 +2,9 @@ import React from "react";
 import { render } from "react-dom";
 import productData from "./item-data";
 import RetailCarousel from "./components/carousel/Carousel";
+import Highlights from "./components/highlights/Highlights";
+
+import * as Styled from "./styles";
 
 class App extends React.Component {
   state = { loading: true, productData };
@@ -17,19 +20,19 @@ class App extends React.Component {
   render() {
     const { productData, loading } = this.state;
     return !loading ? (
-      <div className="main">
-        <div className="col-1">
-          <h1>{productData.title}</h1>
-          <img
+      <Styled.Main>
+        <Styled.ColOne>
+          <Styled.MainTitle>{productData.title}</Styled.MainTitle>
+          <Styled.MainImage
             src={productData.Images[0].PrimaryImage[0].image}
             alt="Ninja Blender"
           />
           <RetailCarousel images={productData.Images[0].AlternateImages} />
-        </div>
-        <div className="col-2">
-          <h2>Column 2</h2>
-        </div>
-      </div>
+        </Styled.ColOne>
+        <Styled.ColTwo>
+          <Highlights highlights={productData.ItemDescription[0].features} />
+        </Styled.ColTwo>
+      </Styled.Main>
     ) : null;
   }
 }

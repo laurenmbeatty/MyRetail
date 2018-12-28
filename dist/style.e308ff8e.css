@@ -1,18 +1,3 @@
 body {
   background-color: #d9d9d9;
 }
-.main {
-  max-width: 1200px;
-  margin: 100px auto 0 auto;
-  display: flex;
-  background-color: #fff;
-}
-.col-1 {
-  width: 40%;
-  margin-right: 30px;
-  border: 1px solid black;
-}
-.col-2 {
-  width: 41%;
-  border: 1px solid black;
-}
