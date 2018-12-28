@@ -1,4 +1,4 @@
-const productData = JSON.stringify({
+const productData = {
   CatalogEntryView: [
     {
       CustomerReview: [
@@ -587,6 +587,6 @@ const productData = JSON.stringify({
       webclass: "Small Appliances"
     }
   ]
-});
+};
 
 export default productData;
