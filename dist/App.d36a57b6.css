@@ -1,0 +1,10 @@
+.slider-slide {
+  width: 61px !important;
+  height: 61px !important;
+}
+.slider-control-bottom-center {
+  display: none;
+}
+h1 {
+  color: red;
+}
