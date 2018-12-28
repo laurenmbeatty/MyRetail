@@ -12,5 +12,5 @@ export const Highlights = styled.ul`
   font-family: Helvetica, sans-serif;
   font-size: 14px;
   line-height: 24px;
-  color: #666;
+  color: #999;
 `;

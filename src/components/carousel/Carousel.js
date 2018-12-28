@@ -24,6 +24,7 @@ class RetailCarousel extends React.Component {
           <p>view larger</p>
         </div>
         <Carousel
+          className="carousel"
           slidesToShow={this.state.slidesToShow}
           wrapAround={this.state.wrapAround}
           cellSpacing={this.state.cellSpacing}

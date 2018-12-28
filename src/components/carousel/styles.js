@@ -6,7 +6,7 @@ export const CarouselArea = styled.section`
   .show-larger {
     display: flex;
     justify-content: center;
-    color: #666;
+    color: #999;
     font-family: Helvetica, sans-serif;
     margin-bottom: 20px;
   }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainTitle = styled.h1`
-  font-family: HelveticaNeueLTStd-Th;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 26px;
   font-weight: normal;
   line-height: 1.15;

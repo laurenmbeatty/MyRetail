@@ -43066,7 +43066,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 200px;\n  margin: 67px auto;\n  .show-larger {\n    display: flex;\n    justify-content: center;\n    color: #666;\n    font-family: Helvetica, sans-serif;\n    margin-bottom: 20px;\n  }\n  .show-larger svg {\n    font-size: 19px;\n    font-weight: lighter;\n    margin-right: 11px;\n    cursor: pointer;\n  }\n  .show-larger p {\n    margin: 0;\n    font-size: 14.5px;\n  }\n  .slider-control-bottomcenter {\n    display: none;\n  }\n  .slider-control-centerright {\n    right: -60px !important;\n  }\n  .slider-control-centerleft {\n    left: -60px !important;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 200px;\n  margin: 67px auto;\n  .show-larger {\n    display: flex;\n    justify-content: center;\n    color: #999;\n    font-family: Helvetica, sans-serif;\n    margin-bottom: 20px;\n  }\n  .show-larger svg {\n    font-size: 19px;\n    font-weight: lighter;\n    margin-right: 11px;\n    cursor: pointer;\n  }\n  .show-larger p {\n    margin: 0;\n    font-size: 14.5px;\n  }\n  .slider-control-bottomcenter {\n    display: none;\n  }\n  .slider-control-centerright {\n    right: -60px !important;\n  }\n  .slider-control-centerleft {\n    left: -60px !important;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -43149,6 +43149,7 @@ function (_React$Component) {
       }, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
         icon: "search-plus"
       }), _react.default.createElement("p", null, "view larger")), _react.default.createElement(_nukaCarousel.default, {
+        className: "carousel",
         slidesToShow: this.state.slidesToShow,
         wrapAround: this.state.wrapAround,
         cellSpacing: this.state.cellSpacing,
@@ -43184,7 +43185,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  padding-left: 15px;\n  font-family: Helvetica, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  color: #666;\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding-left: 15px;\n  font-family: Helvetica, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  color: #999;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -43330,7 +43331,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  font-family: HelveticaNeueLTStd-Th;\n  font-size: 26px;\n  font-weight: normal;\n  line-height: 1.15;\n  letter-spacing: normal;\n  text-align: center;\n  color: #000000;\n  margin: 0 auto 44px auto;\n  width: 74%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 26px;\n  font-weight: normal;\n  line-height: 1.15;\n  letter-spacing: normal;\n  text-align: center;\n  color: #000000;\n  margin: 0 auto 44px auto;\n  width: 74%;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -43486,7 +43487,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52654" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60660" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
