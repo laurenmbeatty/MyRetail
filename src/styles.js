@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const MainTitle = styled.h1`
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: 26px;
-  font-weight: normal;
+  font-weight: 300;
   line-height: 1.15;
   letter-spacing: normal;
   text-align: center;
   color: #000000;
   margin: 0 auto 44px auto;
-  width: 74%;
+  width: 80%;
 `;
 
 export const Main = styled.div`
@@ -46,6 +46,7 @@ export const Price = styled.div`
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 35px;
+  margin-top: 10px;
   .formatted-price {
     font-size: 30.5px;
     font-weight: bold;

@@ -4,7 +4,7 @@ const arrowRight = require("../../../public/images/ArrowRight.png");
 
 export const CarouselArea = styled.section`
   width: 200px;
-  margin: 67px auto;
+  margin: 67px auto 25px;
   .show-larger {
     display: flex;
     justify-content: center;
