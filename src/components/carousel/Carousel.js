@@ -10,9 +10,10 @@ class RetailCarousel extends React.Component {
 
   render() {
     const { images } = this.props;
-
+    const { slideIndex } = this.state;
     return (
       <Styled.CarouselArea>
+        <Styled.MainImage src={images[slideIndex].image} alt="Ninja Blender" />
         <div className="show-larger">
           <FontAwesomeIcon icon="search-plus" />
           <p>view larger</p>

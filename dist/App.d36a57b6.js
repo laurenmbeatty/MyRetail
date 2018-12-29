@@ -43063,14 +43063,24 @@ module.exports = "/ArrowRight.0c847330.png";
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CarouselArea = void 0;
+exports.MainImage = exports.CarouselArea = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  display: block;\n  margin: 0 auto;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 200px;\n  margin: 67px auto 25px;\n  .show-larger {\n    display: flex;\n    justify-content: center;\n    color: #999;\n    font-family: Helvetica, sans-serif;\n    margin-bottom: 20px;\n  }\n  .show-larger svg {\n    font-size: 19px;\n    font-weight: lighter;\n    margin-right: 11px;\n    cursor: pointer;\n  }\n  .show-larger p {\n    margin: 0;\n    font-size: 14.5px;\n  }\n  .slider-control-bottomcenter {\n    display: none;\n  }\n  .slider-control-centerright {\n    right: -60px !important;\n  }\n  .slider-control-centerleft {\n    left: -60px !important;\n  }\n  .slider-control-centerright button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n  .slider-control-centerleft button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0 auto 25px;\n  .show-larger {\n    margin-top: 67px;\n    display: flex;\n    justify-content: center;\n    color: #999;\n    font-family: Helvetica, sans-serif;\n    margin-bottom: 20px;\n  }\n  .show-larger svg {\n    font-size: 19px;\n    font-weight: lighter;\n    margin-right: 11px;\n    cursor: pointer;\n  }\n  .show-larger p {\n    margin: 0;\n    font-size: 14.5px;\n  }\n  .slider.carousel {\n    width: 200px !important;\n    margin-left: auto;\n    margin-right: auto;\n  }\n  .slider-control-bottomcenter {\n    display: none;\n  }\n  .slider-control-centerright {\n    right: -60px !important;\n  }\n  .slider-control-centerleft {\n    left: -60px !important;\n  }\n  .slider-control-centerright button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n  .slider-control-centerleft button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -43088,6 +43098,10 @@ var arrowRight = require("../../../public/images/ArrowRight.png");
 var CarouselArea = _styledComponents.default.section(_templateObject(), arrowRight, arrowLeft);
 
 exports.CarouselArea = CarouselArea;
+
+var MainImage = _styledComponents.default.img(_templateObject2());
+
+exports.MainImage = MainImage;
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../public/images/ArrowLeft.png":"../public/images/ArrowLeft.png","../../../public/images/ArrowRight.png":"../public/images/ArrowRight.png"}],"components/carousel/Carousel.js":[function(require,module,exports) {
 "use strict";
 
@@ -43155,7 +43169,11 @@ function (_React$Component) {
       var _this2 = this;
 
       var images = this.props.images;
-      return _react.default.createElement(Styled.CarouselArea, null, _react.default.createElement("div", {
+      var slideIndex = this.state.slideIndex;
+      return _react.default.createElement(Styled.CarouselArea, null, _react.default.createElement(Styled.MainImage, {
+        src: images[slideIndex].image,
+        alt: "Ninja Blender"
+      }), _react.default.createElement("div", {
         className: "show-larger"
       }, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
         icon: "search-plus"
@@ -43851,24 +43869,14 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Price = exports.MainImage = exports.ColTwo = exports.ColOne = exports.Main = exports.MainTitle = void 0;
+exports.Price = exports.ColTwo = exports.ColOne = exports.Main = exports.MainTitle = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  font-family: Arial, Helvetica, sans-serif;\n  margin-bottom: 35px;\n  margin-top: 10px;\n  .formatted-price {\n    font-size: 30.5px;\n    font-weight: bold;\n    line-height: 0.44;\n    color: #000;\n    padding-right: 6px;\n  }\n  .price-qualifier {\n    font-size: 12px;\n    font-weight: 400;\n    color: #666;\n    line-height: 2.46;\n    text-transform: lowercase;\n  }\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  display: block;\n  margin: 0 auto;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  font-family: Arial, Helvetica, sans-serif;\n  margin-bottom: 35px;\n  margin-top: 10px;\n  .formatted-price {\n    font-size: 30.5px;\n    font-weight: bold;\n    line-height: 0.44;\n    color: #000;\n    padding-right: 6px;\n  }\n  .price-qualifier {\n    font-size: 12px;\n    font-weight: 400;\n    color: #666;\n    line-height: 2.46;\n    text-transform: lowercase;\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -43935,11 +43943,7 @@ var ColTwo = _styledComponents.default.div(_templateObject4());
 
 exports.ColTwo = ColTwo;
 
-var MainImage = _styledComponents.default.img(_templateObject5());
-
-exports.MainImage = MainImage;
-
-var Price = _styledComponents.default.div(_templateObject6());
+var Price = _styledComponents.default.div(_templateObject5());
 
 exports.Price = Price;
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"App.js":[function(require,module,exports) {
@@ -43972,6 +43976,14 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -44018,7 +44030,6 @@ function (_React$Component) {
   _createClass(App, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log(_itemData.default.CatalogEntryView);
       this.setState({
         loading: false,
         productData: _itemData.default.CatalogEntryView[0]
@@ -44030,11 +44041,8 @@ function (_React$Component) {
       var _this$state = this.state,
           productData = _this$state.productData,
           loading = _this$state.loading;
-      return !loading ? _react.default.createElement(Styled.Main, null, _react.default.createElement(Styled.ColOne, null, _react.default.createElement(Styled.MainTitle, null, productData.title), _react.default.createElement(Styled.MainImage, {
-        src: productData.Images[0].PrimaryImage[0].image,
-        alt: "Ninja Blender"
-      }), _react.default.createElement(_Carousel.default, {
-        images: productData.Images[0].AlternateImages
+      return !loading ? _react.default.createElement(Styled.Main, null, _react.default.createElement(Styled.ColOne, null, _react.default.createElement(Styled.MainTitle, null, productData.title), _react.default.createElement(_Carousel.default, {
+        images: [].concat(_toConsumableArray(productData.Images[0].PrimaryImage), _toConsumableArray(productData.Images[0].AlternateImages))
       }), _react.default.createElement(_Reviews.default, {
         reviews: productData.CustomerReview[0]
       })), _react.default.createElement(Styled.ColTwo, null, _react.default.createElement(Styled.Price, null, _react.default.createElement("span", {
@@ -44082,7 +44090,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65253" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65262" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

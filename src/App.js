@@ -22,7 +22,6 @@ class App extends React.Component {
   state = { loading: true, productData };
 
   componentDidMount() {
-    console.log(productData.CatalogEntryView);
     this.setState({
       loading: false,
       productData: productData.CatalogEntryView[0]
@@ -35,11 +34,12 @@ class App extends React.Component {
       <Styled.Main>
         <Styled.ColOne>
           <Styled.MainTitle>{productData.title}</Styled.MainTitle>
-          <Styled.MainImage
-            src={productData.Images[0].PrimaryImage[0].image}
-            alt="Ninja Blender"
+          <RetailCarousel
+            images={[
+              ...productData.Images[0].PrimaryImage,
+              ...productData.Images[0].AlternateImages
+            ]}
           />
-          <RetailCarousel images={productData.Images[0].AlternateImages} />
           <Reviews reviews={productData.CustomerReview[0]} />
         </Styled.ColOne>
         <Styled.ColTwo>

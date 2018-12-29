@@ -37,11 +37,6 @@ export const ColTwo = styled.div`
   }
 `;
 
-export const MainImage = styled.img`
-  display: block;
-  margin: 0 auto;
-`;
-
 export const Price = styled.div`
   display: flex;
   font-family: Arial, Helvetica, sans-serif;

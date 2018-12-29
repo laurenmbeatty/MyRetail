@@ -3,9 +3,9 @@ const arrowLeft = require("../../../public/images/ArrowLeft.png");
 const arrowRight = require("../../../public/images/ArrowRight.png");
 
 export const CarouselArea = styled.section`
-  width: 200px;
-  margin: 67px auto 25px;
+  margin: 0 auto 25px;
   .show-larger {
+    margin-top: 67px;
     display: flex;
     justify-content: center;
     color: #999;
@@ -21,6 +21,11 @@ export const CarouselArea = styled.section`
   .show-larger p {
     margin: 0;
     font-size: 14.5px;
+  }
+  .slider.carousel {
+    width: 200px !important;
+    margin-left: auto;
+    margin-right: auto;
   }
   .slider-control-bottomcenter {
     display: none;
@@ -47,4 +52,8 @@ export const CarouselArea = styled.section`
     }
     font-size: 0;
   }
+`;
+export const MainImage = styled.img`
+  display: block;
+  margin: 0 auto;
 `;
