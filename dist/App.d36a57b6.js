@@ -43132,45 +43132,57 @@ function (_React$Component) {
   _inherits(RetailCarousel, _React$Component);
 
   function RetailCarousel() {
+    var _getPrototypeOf2;
+
     var _this;
+
+    var _temp;
 
     _classCallCheck(this, RetailCarousel);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(RetailCarousel).apply(this, arguments));
-    _this.state = {
-      wrapAround: true,
-      slidesToShow: 3,
-      cellSpacing: 15,
-      slideWidth: "72px",
-      slideHeight: "72px",
-      autoGenerateStyleTag: true
-    };
-    return _this;
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(RetailCarousel)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
+      slideIndex: 0
+    }, _temp));
   }
 
   _createClass(RetailCarousel, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var images = this.props.images;
+      var slideIndex = this.state.slideIndex;
       return _react.default.createElement(Styled.CarouselArea, null, _react.default.createElement("div", {
         className: "show-larger"
       }, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
         icon: "search-plus"
       }), _react.default.createElement("p", null, "view larger")), _react.default.createElement(_nukaCarousel.default, {
         className: "carousel",
-        slidesToShow: this.state.slidesToShow,
-        wrapAround: this.state.wrapAround,
-        cellSpacing: this.state.cellSpacing,
-        slideWidth: this.state.slideWidth,
-        slideHeight: this.state.slideHeight,
-        autoGenerateStyleTag: this.state.autoGenerateStyleTag
+        slidesToShow: 3,
+        wrapAround: true,
+        cellSpacing: 15,
+        slideWidth: "72px",
+        slideHeight: "72px"
       }, images.map(function (image, index) {
-        return _react.default.createElement("img", {
-          src: image.image,
-          key: index,
-          index: index,
-          alt: "ninja-blender-".concat(index + 1)
-        });
+        return (
+          /* eslint-disable-next-line */
+          _react.default.createElement("img", {
+            onClick: function onClick(event) {
+              return _this2.setState({
+                slideIndex: parseInt(event.target.getAttribute("value"))
+              });
+            },
+            src: image.image,
+            key: index,
+            index: index,
+            value: index,
+            alt: "ninja-blender-".concat(index + 1)
+          })
+        );
       })));
     }
   }]);
@@ -44071,7 +44083,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60143" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64752" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

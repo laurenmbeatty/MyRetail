@@ -4,19 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Styled from "./styles";
 
 class RetailCarousel extends React.Component {
-  constructor() {
-    super(...arguments);
-    this.state = {
-      wrapAround: true,
-      slidesToShow: 3,
-      cellSpacing: 15,
-      slideWidth: "72px",
-      slideHeight: "72px",
-      autoGenerateStyleTag: true
-    };
-  }
+  state = {
+    slideIndex: 0
+  };
+
   render() {
     const { images } = this.props;
+    const { slideIndex } = this.state;
+
     return (
       <Styled.CarouselArea>
         <div className="show-larger">
@@ -25,18 +20,24 @@ class RetailCarousel extends React.Component {
         </div>
         <Carousel
           className="carousel"
-          slidesToShow={this.state.slidesToShow}
-          wrapAround={this.state.wrapAround}
-          cellSpacing={this.state.cellSpacing}
-          slideWidth={this.state.slideWidth}
-          slideHeight={this.state.slideHeight}
-          autoGenerateStyleTag={this.state.autoGenerateStyleTag}
+          slidesToShow={3}
+          wrapAround={true}
+          cellSpacing={15}
+          slideWidth={"72px"}
+          slideHeight={"72px"}
         >
           {images.map((image, index) => (
+            /* eslint-disable-next-line */
             <img
+              onClick={event =>
+                this.setState({
+                  slideIndex: parseInt(event.target.getAttribute("value"))
+                })
+              }
               src={image.image}
               key={index}
               index={index}
+              value={index}
               alt={`ninja-blender-${index + 1}`}
             />
           ))}
