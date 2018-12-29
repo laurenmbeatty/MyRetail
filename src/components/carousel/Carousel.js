@@ -39,6 +39,7 @@ class RetailCarousel extends React.Component {
               index={index}
               value={index}
               alt={`ninja-blender-${index + 1}`}
+              className={slideIndex === index ? `chosen` : ``}
             />
           ))}
         </Carousel>

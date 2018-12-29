@@ -23,9 +23,12 @@ export const CarouselArea = styled.section`
     font-size: 14.5px;
   }
   .slider.carousel {
-    width: 200px !important;
+    width: 220px !important;
     margin-left: auto;
     margin-right: auto;
+  }
+  .chosen {
+    border: 1px solid #999;
   }
   .slider-control-bottomcenter {
     display: none;

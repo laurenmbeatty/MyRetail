@@ -43080,7 +43080,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  margin: 0 auto 25px;\n  .show-larger {\n    margin-top: 67px;\n    display: flex;\n    justify-content: center;\n    color: #999;\n    font-family: Helvetica, sans-serif;\n    margin-bottom: 20px;\n  }\n  .show-larger svg {\n    font-size: 19px;\n    font-weight: lighter;\n    margin-right: 11px;\n    cursor: pointer;\n  }\n  .show-larger p {\n    margin: 0;\n    font-size: 14.5px;\n  }\n  .slider.carousel {\n    width: 200px !important;\n    margin-left: auto;\n    margin-right: auto;\n  }\n  .slider-control-bottomcenter {\n    display: none;\n  }\n  .slider-control-centerright {\n    right: -60px !important;\n  }\n  .slider-control-centerleft {\n    left: -60px !important;\n  }\n  .slider-control-centerright button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n  .slider-control-centerleft button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0 auto 25px;\n  .show-larger {\n    margin-top: 67px;\n    display: flex;\n    justify-content: center;\n    color: #999;\n    font-family: Helvetica, sans-serif;\n    margin-bottom: 20px;\n  }\n  .show-larger svg {\n    font-size: 19px;\n    font-weight: lighter;\n    margin-right: 11px;\n    cursor: pointer;\n  }\n  .show-larger p {\n    margin: 0;\n    font-size: 14.5px;\n  }\n  .slider.carousel {\n    width: 220px !important;\n    margin-left: auto;\n    margin-right: auto;\n  }\n  .chosen {\n    border: 1px solid #999;\n  }\n  .slider-control-bottomcenter {\n    display: none;\n  }\n  .slider-control-centerright {\n    right: -60px !important;\n  }\n  .slider-control-centerleft {\n    left: -60px !important;\n  }\n  .slider-control-centerright button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n  .slider-control-centerleft button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -43197,7 +43197,8 @@ function (_React$Component) {
             key: index,
             index: index,
             value: index,
-            alt: "ninja-blender-".concat(index + 1)
+            alt: "ninja-blender-".concat(index + 1),
+            className: slideIndex === index ? "chosen" : ""
           })
         );
       })));
@@ -44090,7 +44091,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54046" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54734" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
