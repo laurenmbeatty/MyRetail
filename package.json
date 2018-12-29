@@ -12,8 +12,7 @@
     "test:watch": "jest --silent --watch",
     "test:coverage": "jest --silent --coverage",
     "dev": "parcel src/index.html",
-    "build": "parcel build --public-url ./dist/ src/index.html",
-    "start": "npm run build && babel-node server.js"
+    "build": "parcel build --public-url ./dist/ src/index.html"
   },
   "author": "Lauren Beatty",
   "license": "ISC",
