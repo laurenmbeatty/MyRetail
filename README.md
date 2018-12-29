@@ -12,7 +12,7 @@
 - `npm run lint` - Linting with eslint
 - `npm run format` - Format with prettier 💄
 - `npm run build` - Build the application for production 🏗️
-- `npm run deploy` - Runs the build script and deploys to surge. Ship it! 🛳️
+- `npm run deploy` - Runs the build script and deploys to surge. Application is currently running at [http://fretful-company.surge.sh](http://fretful-company.surge.sh). Ship it! 🛳️
   `
 
 ### Tech Stack
