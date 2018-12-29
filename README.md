@@ -4,7 +4,7 @@
 
 - `git clone https://github.com/laurenmbeatty/MyRetail.git` - Clone the repository to your machine.
 - `npm install` - Install the necessary dependencies.
-- `npm run dev` - Start a local development server at [locahost:1234](localhost:1234).
+- `npm run dev` - Start a local development server at [http://locahost:1234](localhost:1234).
 
 ### Other Useful npm Scripts
 
