@@ -1,12 +1,101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshot 1`] = `
+.c0 {
+  margin: 0 auto 25px;
+}
+
+.c0 .show-larger {
+  margin-top: 67px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #999;
+  font-family: Helvetica,sans-serif;
+  margin-bottom: 20px;
+}
+
+.c0 .show-larger svg {
+  font-size: 19px;
+  font-weight: lighter;
+  margin-right: 11px;
+  cursor: pointer;
+}
+
+.c0 .show-larger p {
+  margin: 0;
+  font-size: 14.5px;
+}
+
+.c0 .slider.carousel {
+  width: 220px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c0 .chosen {
+  border: 1px solid #999;
+}
+
+.c0 .slider-control-bottomcenter {
+  display: none;
+}
+
+.c0 .slider-control-centerright {
+  right: -60px !important;
+}
+
+.c0 .slider-control-centerleft {
+  left: -60px !important;
+}
+
+.c0 .slider-control-centerright button {
+  background: #fff url(test-file-stub) no-repeat center !important;
+  color: #fff !important;
+  font-size: 0;
+}
+
+.c0 .slider-control-centerright button:focus {
+  outline: none;
+}
+
+.c0 .slider-control-centerleft button {
+  background: #fff url(test-file-stub) no-repeat center !important;
+  color: #fff !important;
+  font-size: 0;
+}
+
+.c0 .slider-control-centerleft button:focus {
+  outline: none;
+}
+
 <section
-  className="sc-bdVaJa kybYPP"
+  className="c0"
 >
   <div
     className="show-larger"
   >
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-search-plus fa-w-16 "
+      data-icon="search-plus"
+      data-prefix="fas"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M304 192v32c0 6.6-5.4 12-12 12h-56v56c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-56h-56c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h56v-56c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v56h56c6.6 0 12 5.4 12 12zm201 284.7L476.7 505c-9.4 9.4-24.6 9.4-33.9 0L343 405.3c-4.5-4.5-7-10.6-7-17V372c-35.3 27.6-79.7 44-128 44C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 48.3-16.4 92.7-44 128h16.3c6.4 0 12.5 2.5 17 7l99.7 99.7c9.3 9.4 9.3 24.6 0 34zM344 208c0-75.2-60.8-136-136-136S72 132.8 72 208s60.8 136 136 136 136-60.8 136-136z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
     <p>
       view larger
     </p>

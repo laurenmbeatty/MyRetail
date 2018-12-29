@@ -43160,6 +43160,10 @@ function (_React$Component) {
 
     return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(RetailCarousel)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
       slideIndex: 0
+    }, _this.handleImageClick = function (event) {
+      _this.setState({
+        slideIndex: parseInt(event.target.getAttribute("value"))
+      });
     }, _temp));
   }
 
@@ -43188,11 +43192,7 @@ function (_React$Component) {
         return (
           /* eslint-disable-next-line */
           _react.default.createElement("img", {
-            onClick: function onClick(event) {
-              return _this2.setState({
-                slideIndex: parseInt(event.target.getAttribute("value"))
-              });
-            },
+            onClick: _this2.handleImageClick,
             src: image.image,
             key: index,
             index: index,
@@ -43233,7 +43233,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  margin: 20px 0 20px 0;\n  font-family: Helvetica, sans-serif;\n  font-size: 36px;\n  font-weight: 400\n  line-height: 50px;\n  color: #333;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 20px 0 20px 0;\n  font-family: Helvetica, sans-serif;\n  font-size: 36px;\n  font-weight: 400;\n  line-height: 50px;\n  color: #333;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -43408,7 +43408,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var offers = this.props.offers;
-      return _react.default.createElement("div", null, _react.default.createElement(Styled.Rule, null), _react.default.createElement(Styled.Offers, null, offers.map(function (offer, index) {
+      return _react.default.createElement("div", null, _react.default.createElement(Styled.Rule, null), offers && _react.default.createElement(Styled.Offers, null, offers.map(function (offer, index) {
         return _react.default.createElement("li", {
           key: index
         }, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
@@ -43762,9 +43762,27 @@ function (_React$Component) {
   _inherits(Reviews, _React$Component);
 
   function Reviews() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    var _temp;
+
     _classCallCheck(this, Reviews);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Reviews).apply(this, arguments));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Reviews)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.manipulateDate = function (info) {
+      var newDate = "";
+      var month = info.slice(4, 7);
+      info = new Date(info);
+      var year = info.getFullYear();
+      var day = info.getDate();
+      newDate = "".concat(month, " ").concat(day, ", ").concat(year);
+      return newDate;
+    }, _temp));
   }
 
   _createClass(Reviews, [{
@@ -43772,18 +43790,7 @@ function (_React$Component) {
     value: function render() {
       var reviews = this.props.reviews;
       var starsArray = [1, 2, 3, 4, 5];
-
-      var manipulateDate = function manipulateDate(info) {
-        var newDate = "";
-        var month = info.slice(4, 7);
-        info = new Date(info);
-        var year = info.getFullYear();
-        var day = info.getDate();
-        newDate = "".concat(month, " ").concat(day, ", ").concat(year);
-        return newDate;
-      };
-
-      return _react.default.createElement(Styled.ReviewSection, null, _react.default.createElement(Styled.ReviewHeading, null, _react.default.createElement("div", {
+      return _react.default.createElement(Styled.ReviewSection, null, reviews && _react.default.createElement(Styled.ReviewHeading, null, _react.default.createElement("div", {
         className: "ratings-stars-container"
       }, _react.default.createElement("div", {
         className: "ratings-stars"
@@ -43802,7 +43809,7 @@ function (_React$Component) {
       }, "overall")), _react.default.createElement("a", {
         href: "/",
         className: "view-all-ratings"
-      }, "view all ", reviews.totalReviews, " reviews")), _react.default.createElement(Styled.ReviewMain, null, _react.default.createElement("div", {
+      }, "view all ", reviews.totalReviews, " reviews")), reviews && _react.default.createElement(Styled.ReviewMain, null, _react.default.createElement("div", {
         className: "review-main-heading"
       }, _react.default.createElement("div", {
         className: "pro-con"
@@ -43830,7 +43837,7 @@ function (_React$Component) {
         className: "reviewer"
       }, reviews.Pro[0].screenName), _react.default.createElement("span", {
         className: "review-date"
-      }, manipulateDate(reviews.Pro[0].datePosted)))), _react.default.createElement(Styled.Review, null, _react.default.createElement("div", {
+      }, this.manipulateDate(reviews.Pro[0].datePosted)))), _react.default.createElement(Styled.Review, null, _react.default.createElement("div", {
         className: "ratings-stars"
       }, starsArray.map(function (num) {
         return num <= parseInt(reviews.Con[0].overallRating) ? _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
@@ -43852,7 +43859,7 @@ function (_React$Component) {
         className: "reviewer"
       }, reviews.Con[0].screenName), _react.default.createElement("span", {
         className: "review-date"
-      }, manipulateDate(reviews.Con[0].datePosted)))))));
+      }, this.manipulateDate(reviews.Con[0].datePosted)))))));
     }
   }]);
 
@@ -44088,7 +44095,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51609" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51205" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

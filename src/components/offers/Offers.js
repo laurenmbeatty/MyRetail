@@ -7,14 +7,16 @@ class Offers extends React.Component {
     return (
       <div>
         <Styled.Rule />
-        <Styled.Offers>
-          {offers.map((offer, index) => (
-            <li key={index}>
-              <FontAwesomeIcon icon="tag" />
-              <span>{offer.Description[0].shortDescription}</span>
-            </li>
-          ))}
-        </Styled.Offers>
+        {offers && (
+          <Styled.Offers>
+            {offers.map((offer, index) => (
+              <li key={index}>
+                <FontAwesomeIcon icon="tag" />
+                <span>{offer.Description[0].shortDescription}</span>
+              </li>
+            ))}
+          </Styled.Offers>
+        )}
         <Styled.Rule />
       </div>
     );

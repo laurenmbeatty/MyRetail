@@ -8,6 +8,12 @@ class RetailCarousel extends React.Component {
     slideIndex: 0
   };
 
+  handleImageClick = event => {
+    this.setState({
+      slideIndex: parseInt(event.target.getAttribute("value"))
+    });
+  };
+
   render() {
     const { images } = this.props;
     const { slideIndex } = this.state;
@@ -35,11 +41,7 @@ class RetailCarousel extends React.Component {
             {images.map((image, index) => (
               /* eslint-disable-next-line */
               <img
-                onClick={event =>
-                  this.setState({
-                    slideIndex: parseInt(event.target.getAttribute("value"))
-                  })
-                }
+                onClick={this.handleImageClick}
                 src={image.image}
                 key={index}
                 index={index}
