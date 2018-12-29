@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<section
+  className="sc-bdVaJa kybYPP"
+>
+  <div
+    className="show-larger"
+  >
+    <p>
+      view larger
+    </p>
+  </div>
+</section>
+`;

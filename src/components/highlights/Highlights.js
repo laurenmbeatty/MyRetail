@@ -6,11 +6,13 @@ class Highlights extends React.Component {
     return (
       <div>
         <Styled.HighlightsTitle>product highlights</Styled.HighlightsTitle>
-        <Styled.Highlights>
-          {highlights.map((highlight, index) => (
-            <li key={index} dangerouslySetInnerHTML={{ __html: highlight }} />
-          ))}
-        </Styled.Highlights>
+        {highlights && (
+          <Styled.Highlights>
+            {highlights.map((highlight, index) => (
+              <li key={index} dangerouslySetInnerHTML={{ __html: highlight }} />
+            ))}
+          </Styled.Highlights>
+        )}
       </div>
     );
   }

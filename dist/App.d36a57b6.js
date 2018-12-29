@@ -43102,7 +43102,7 @@ exports.CarouselArea = CarouselArea;
 var MainImage = _styledComponents.default.img(_templateObject2());
 
 exports.MainImage = MainImage;
-},{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../public/images/ArrowLeft.png":"../public/images/ArrowLeft.png","../../../public/images/ArrowRight.png":"../public/images/ArrowRight.png"}],"components/carousel/Carousel.js":[function(require,module,exports) {
+},{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../public/images/ArrowLeft.png":"../public/images/ArrowLeft.png","../../../public/images/ArrowRight.png":"../public/images/ArrowRight.png"}],"components/carousel/RetailCarousel.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43170,14 +43170,14 @@ function (_React$Component) {
 
       var images = this.props.images;
       var slideIndex = this.state.slideIndex;
-      return _react.default.createElement(Styled.CarouselArea, null, _react.default.createElement(Styled.MainImage, {
+      return _react.default.createElement(Styled.CarouselArea, null, images && _react.default.createElement(Styled.MainImage, {
         src: images[slideIndex].image,
         alt: "Ninja Blender"
       }), _react.default.createElement("div", {
         className: "show-larger"
       }, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
         icon: "search-plus"
-      }), _react.default.createElement("p", null, "view larger")), _react.default.createElement(_nukaCarousel.default, {
+      }), _react.default.createElement("p", null, "view larger")), images && _react.default.createElement(_nukaCarousel.default, {
         className: "carousel",
         slidesToShow: 3,
         wrapAround: true,
@@ -43300,7 +43300,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var highlights = this.props.highlights;
-      return _react.default.createElement("div", null, _react.default.createElement(Styled.HighlightsTitle, null, "product highlights"), _react.default.createElement(Styled.Highlights, null, highlights.map(function (highlight, index) {
+      return _react.default.createElement("div", null, _react.default.createElement(Styled.HighlightsTitle, null, "product highlights"), highlights && _react.default.createElement(Styled.Highlights, null, highlights.map(function (highlight, index) {
         return _react.default.createElement("li", {
           key: index,
           dangerouslySetInnerHTML: {
@@ -43957,7 +43957,7 @@ var _freeSolidSvgIcons = require("@fortawesome/free-solid-svg-icons");
 
 var _itemData = _interopRequireDefault(require("./item-data"));
 
-var _Carousel = _interopRequireDefault(require("./components/carousel/Carousel"));
+var _RetailCarousel = _interopRequireDefault(require("./components/carousel/RetailCarousel"));
 
 var _Highlights = _interopRequireDefault(require("./components/highlights/Highlights"));
 
@@ -44039,7 +44039,7 @@ function (_React$Component) {
       var _this$state = this.state,
           productData = _this$state.productData,
           loading = _this$state.loading;
-      return !loading ? _react.default.createElement(Styled.Main, null, _react.default.createElement(Styled.ColOne, null, _react.default.createElement(Styled.MainTitle, null, productData.title), _react.default.createElement(_Carousel.default, {
+      return !loading ? _react.default.createElement(Styled.Main, null, _react.default.createElement(Styled.ColOne, null, _react.default.createElement(Styled.MainTitle, null, productData.title), _react.default.createElement(_RetailCarousel.default, {
         images: [].concat(_toConsumableArray(productData.Images[0].PrimaryImage), _toConsumableArray(productData.Images[0].AlternateImages))
       }), _react.default.createElement(_Reviews.default, {
         reviews: productData.CustomerReview[0]
@@ -44061,7 +44061,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 (0, _reactDom.render)(_react.default.createElement(App, null), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","@fortawesome/fontawesome-svg-core":"../node_modules/@fortawesome/fontawesome-svg-core/index.es.js","@fortawesome/free-solid-svg-icons":"../node_modules/@fortawesome/free-solid-svg-icons/index.es.js","./item-data":"item-data.js","./components/carousel/Carousel":"components/carousel/Carousel.js","./components/highlights/Highlights":"components/highlights/Highlights.js","./components/offers/Offers":"components/offers/Offers.js","./components/order/Order":"components/order/Order.js","./components/reviews/Reviews":"components/reviews/Reviews.js","./styles":"styles.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","@fortawesome/fontawesome-svg-core":"../node_modules/@fortawesome/fontawesome-svg-core/index.es.js","@fortawesome/free-solid-svg-icons":"../node_modules/@fortawesome/free-solid-svg-icons/index.es.js","./item-data":"item-data.js","./components/carousel/RetailCarousel":"components/carousel/RetailCarousel.js","./components/highlights/Highlights":"components/highlights/Highlights.js","./components/offers/Offers":"components/offers/Offers.js","./components/order/Order":"components/order/Order.js","./components/reviews/Reviews":"components/reviews/Reviews.js","./styles":"styles.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -44088,7 +44088,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60649" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51609" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
