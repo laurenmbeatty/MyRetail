@@ -10,7 +10,6 @@ class RetailCarousel extends React.Component {
 
   render() {
     const { images } = this.props;
-    const { slideIndex } = this.state;
 
     return (
       <Styled.CarouselArea>

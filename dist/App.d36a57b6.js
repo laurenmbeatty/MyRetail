@@ -43155,7 +43155,6 @@ function (_React$Component) {
       var _this2 = this;
 
       var images = this.props.images;
-      var slideIndex = this.state.slideIndex;
       return _react.default.createElement(Styled.CarouselArea, null, _react.default.createElement("div", {
         className: "show-larger"
       }, _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
@@ -44083,7 +44082,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64752" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65253" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
