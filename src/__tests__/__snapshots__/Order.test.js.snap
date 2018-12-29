@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<section
+  className="sc-bdVaJa llzKXe"
+>
+  <form
+    className="sc-bwzfXH jwfMIB"
+  >
+    <div
+      className="sc-htpNat cXcQOz"
+    >
+      <label
+        className="quantity-label"
+        htmlFor="quantity"
+      >
+        quantity:
+      </label>
+      <div
+        className="counter-container"
+      >
+        <span
+          className="quantity"
+        >
+          1
+        </span>
+      </div>
+    </div>
+    <div
+      className="sc-bxivhb cmTQFS"
+    />
+  </form>
+  <div
+    className="sc-ifAKCX uVQDR"
+  >
+    <p
+      className="returns-label"
+    >
+      returns
+    </p>
+    <hr />
+    <p
+      className="returns-description"
+    >
+      This item must be returned within 30 days of the ship date. See return policy for details. Prices, promotions, styles and availability may vary by store and online.
+    </p>
+  </div>
+  <div
+    className="sc-EHOje jYbYEx"
+  >
+    <button
+      className="social-button"
+    >
+      ADD TO REGISTRY
+    </button>
+    <button
+      className="social-button"
+    >
+      ADD TO LIST
+    </button>
+    <button
+      className="social-button"
+    >
+      SHARE
+    </button>
+  </div>
+</section>
+`;

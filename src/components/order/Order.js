@@ -6,8 +6,7 @@ class Order extends React.Component {
     quantity: 1
   };
 
-  decrement = event => {
-    event.preventDefault();
+  decrement = () => {
     this.state.quantity === 0
       ? this.setState({
           quantity: 0
@@ -17,8 +16,7 @@ class Order extends React.Component {
         });
   };
 
-  increment = event => {
-    event.preventDefault();
+  increment = () => {
     this.setState({
       quantity: this.state.quantity + 1
     });
