@@ -27,7 +27,7 @@ class RetailCarousel extends React.Component {
         )}
         <div className="show-larger">
           <FontAwesomeIcon icon="search-plus" />
-          <p>view larger</p>
+          <p>Test</p>
         </div>
         {images && (
           <Carousel
