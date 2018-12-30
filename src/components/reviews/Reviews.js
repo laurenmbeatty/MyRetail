@@ -12,6 +12,7 @@ class Reviews extends React.Component {
     newDate = `${month} ${day}, ${year}`;
     return newDate;
   };
+
   render() {
     const { reviews } = this.props;
     const starsArray = [1, 2, 3, 4, 5];

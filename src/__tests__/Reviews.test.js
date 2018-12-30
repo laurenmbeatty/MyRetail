@@ -1,5 +1,9 @@
 import React from "react";
 import { create } from "react-test-renderer";
+import "jest-styled-components";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+library.add(faStar);
 import Reviews from "../components/reviews/Reviews";
 
 test("snapshot", () => {
