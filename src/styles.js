@@ -31,6 +31,7 @@ export const ColOne = styled.div`
   margin-right: 30px;
   @media screen and (max-width: 1200px) {
     width: 100%;
+    margin: 0 auto;
   }
 `;
 

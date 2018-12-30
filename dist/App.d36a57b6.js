@@ -43901,7 +43901,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 40%;\n  margin-right: 30px;\n  @media screen and (max-width: 1200px) {\n    width: 100%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 40%;\n  margin-right: 30px;\n  @media screen and (max-width: 1200px) {\n    width: 100%;\n    margin: 0 auto;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -44098,7 +44098,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63209" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57322" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
