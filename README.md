@@ -24,3 +24,4 @@
 - [Parcel](https://parceljs.org/) as the bundler/build tool. 📦
 - [React](https://reactjs.org/) as the frontend library. Note this project was scaffolded/configured by hand.
 - [styled-components](https://www.styled-components.com/) for modular CSS. 💅
+- [Jest](https://jestjs.io/) and [react-testing-library](https://github.com/kentcdodds/react-testing-library#installation) for testing. I had never used react-testing-library before, and now I HIGHLY recommend it 💯 !
