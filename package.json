@@ -54,7 +54,7 @@
   },
   "git": {
     "scripts": {
-      "pre-push": "npm run build"
+      "pre-push": "npm run deploy"
     }
   },
   "jest": {
