@@ -10,6 +10,10 @@ export const MainTitle = styled.h1`
   color: #000000;
   margin: 0 auto 44px auto;
   width: 80%;
+  @media screen and (max-width: 1200px) {
+    width: 40%;
+    min-width: 370px;
+  }
 `;
 
 export const Main = styled.div`
@@ -33,7 +37,9 @@ export const ColOne = styled.div`
 export const ColTwo = styled.div`
   width: 41%;
   @media screen and (max-width: 1200px) {
-    width: 100%;
+    width: 50%;
+    margin: 0 auto;
+    min-width: 470px;
   }
 `;
 

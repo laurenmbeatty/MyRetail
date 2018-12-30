@@ -1,7 +1,6 @@
 import React from "react";
 import { create } from "react-test-renderer";
-import { mount, shallow } from "enzyme";
-import sinon from "sinon";
+import { mount } from "enzyme";
 import "jest-styled-components";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";

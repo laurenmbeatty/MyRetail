@@ -35,6 +35,9 @@ export const ReviewHeading = styled.div`
     color: #000;
     text-decoration: none;
   }
+  @media screen and (max-width: 1200px) {
+    margin-top: 60px;
+  }
 `;
 
 export const ReviewMain = styled.div`

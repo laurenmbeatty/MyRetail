@@ -43680,7 +43680,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-end;\n  width: 90%;\n  margin: 0 auto;\n  .ratings-stars-container {\n    display: flex;\n    align-items: flex-end;\n  }\n  .ratings-stars {\n    display: flex;\n  }\n  .ratings-label {\n    padding-left: 8px;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 14px;\n    font-weight: bold;\n    color: #000;\n  }\n  svg.active {\n    font-size: 25px;\n    color: #cc0000;\n  }\n  svg {\n    font-size: 25px;\n    color: #999999;\n  }\n  .view-all-ratings {\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 14px;\n    font-weight: bold;\n    color: #000;\n    text-decoration: none;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-end;\n  width: 90%;\n  margin: 0 auto;\n  .ratings-stars-container {\n    display: flex;\n    align-items: flex-end;\n  }\n  .ratings-stars {\n    display: flex;\n  }\n  .ratings-label {\n    padding-left: 8px;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 14px;\n    font-weight: bold;\n    color: #000;\n  }\n  svg.active {\n    font-size: 25px;\n    color: #cc0000;\n  }\n  svg {\n    font-size: 25px;\n    color: #999999;\n  }\n  .view-all-ratings {\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 14px;\n    font-weight: bold;\n    color: #000;\n    text-decoration: none;\n  }\n  @media screen and (max-width: 1200px) {\n    margin-top: 60px;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -43891,7 +43891,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  width: 41%;\n  @media screen and (max-width: 1200px) {\n    width: 100%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 41%;\n  @media screen and (max-width: 1200px) {\n    width: 50%;\n    margin: 0 auto;\n    min-width: 470px;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -43921,7 +43921,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  font-family: Helvetica, sans-serif;\n  font-size: 26px;\n  font-weight: 300;\n  line-height: 1.15;\n  letter-spacing: normal;\n  text-align: center;\n  color: #000000;\n  margin: 0 auto 44px auto;\n  width: 80%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: Helvetica, sans-serif;\n  font-size: 26px;\n  font-weight: 300;\n  line-height: 1.15;\n  letter-spacing: normal;\n  text-align: center;\n  color: #000000;\n  margin: 0 auto 44px auto;\n  width: 80%;\n  @media screen and (max-width: 1200px) {\n    width: 40%;\n    min-width: 370px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -44043,14 +44043,15 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var windowWidth = window.innerWidth;
       var _this$state = this.state,
           productData = _this$state.productData,
           loading = _this$state.loading;
       return !loading ? _react.default.createElement(Styled.Main, null, _react.default.createElement(Styled.ColOne, null, _react.default.createElement(Styled.MainTitle, null, productData.title), _react.default.createElement(_RetailCarousel.default, {
         images: [].concat(_toConsumableArray(productData.Images[0].PrimaryImage), _toConsumableArray(productData.Images[0].AlternateImages))
-      }), _react.default.createElement(_Reviews.default, {
+      }), windowWidth > 1199 ? _react.default.createElement(_Reviews.default, {
         reviews: productData.CustomerReview[0]
-      })), _react.default.createElement(Styled.ColTwo, null, _react.default.createElement(Styled.Price, null, _react.default.createElement("span", {
+      }) : null), _react.default.createElement(Styled.ColTwo, null, _react.default.createElement(Styled.Price, null, _react.default.createElement("span", {
         className: "formatted-price"
       }, productData.Offers[0].OfferPrice[0].formattedPriceValue), _react.default.createElement("span", {
         className: "price-qualifier"
@@ -44060,7 +44061,9 @@ function (_React$Component) {
         available: productData.purchasingChannelCode
       }), _react.default.createElement(_Highlights.default, {
         highlights: productData.ItemDescription[0].features
-      }))) : null;
+      }), windowWidth < 1200 ? _react.default.createElement(_Reviews.default, {
+        reviews: productData.CustomerReview[0]
+      }) : null)) : null;
     }
   }]);
 
@@ -44095,7 +44098,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61203" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63209" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

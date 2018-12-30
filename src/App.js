@@ -29,6 +29,7 @@ class App extends React.Component {
   }
 
   render() {
+    let windowWidth = window.innerWidth;
     const { productData, loading } = this.state;
     return !loading ? (
       <Styled.Main>
@@ -40,7 +41,9 @@ class App extends React.Component {
               ...productData.Images[0].AlternateImages
             ]}
           />
-          <Reviews reviews={productData.CustomerReview[0]} />
+          {windowWidth > 1199 ? (
+            <Reviews reviews={productData.CustomerReview[0]} />
+          ) : null}
         </Styled.ColOne>
         <Styled.ColTwo>
           <Styled.Price>
@@ -54,6 +57,9 @@ class App extends React.Component {
           <Offers offers={productData.Promotions} />
           <Order available={productData.purchasingChannelCode} />
           <Highlights highlights={productData.ItemDescription[0].features} />
+          {windowWidth < 1200 ? (
+            <Reviews reviews={productData.CustomerReview[0]} />
+          ) : null}
         </Styled.ColTwo>
       </Styled.Main>
     ) : null;
