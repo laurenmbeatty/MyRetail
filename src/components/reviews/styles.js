@@ -1,5 +1,7 @@
 import styled from "styled-components";
-export const ReviewSection = styled.section``;
+export const ReviewSection = styled.section`
+  margin-bottom: 30px;
+`;
 export const ReviewHeading = styled.div`
   display: flex;
   justify-content: space-between;
