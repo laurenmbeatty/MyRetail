@@ -43197,6 +43197,7 @@ function (_React$Component) {
             key: index,
             index: index,
             value: index,
+            "data-testid": "carousel-image-".concat(index),
             alt: "ninja-blender-".concat(index + 1),
             className: slideIndex === index ? "chosen" : ""
           })
@@ -43819,6 +43820,7 @@ function (_React$Component) {
         className: "ratings-stars"
       }, starsArray.map(function (num) {
         return num <= parseInt(reviews.Pro[0].overallRating) ? _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
+          "data-testid": "rendered-star",
           key: num,
           icon: "star",
           className: "icon-star active"
@@ -44098,7 +44100,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57322" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53546" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

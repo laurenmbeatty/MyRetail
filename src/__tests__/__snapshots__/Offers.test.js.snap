@@ -1,12 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshot 1`] = `
+.c0 {
+  color: #ccc;
+}
+
 <div>
   <hr
-    className="sc-bdVaJa htMPpU"
+    className="c0"
   />
   <hr
-    className="sc-bdVaJa htMPpU"
+    className="c0"
   />
 </div>
 `;

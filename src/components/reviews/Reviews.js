@@ -65,6 +65,7 @@ class Reviews extends React.Component {
                   {starsArray.map(num =>
                     num <= parseInt(reviews.Pro[0].overallRating) ? (
                       <FontAwesomeIcon
+                        data-testid={`rendered-star`}
                         key={num}
                         icon="star"
                         className="icon-star active"

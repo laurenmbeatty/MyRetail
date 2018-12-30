@@ -46,6 +46,7 @@ class RetailCarousel extends React.Component {
                 key={index}
                 index={index}
                 value={index}
+                data-testid={`carousel-image-${index}`}
                 alt={`ninja-blender-${index + 1}`}
                 className={slideIndex === index ? `chosen` : ``}
               />

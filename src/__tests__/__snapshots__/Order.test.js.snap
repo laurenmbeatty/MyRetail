@@ -1,14 +1,193 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshot 1`] = `
+.c0 {
+  color: #ccc;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.c0 .find-in-store {
+  color: #000;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.17;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c2 {
+  border: 1px solid #d3d2d2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 5px 8px 5px 11px;
+  width: 45%;
+}
+
+.c2 .quantity-label {
+  color: #333;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 14px;
+}
+
+.c2 .counter-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 .quantity {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 18px;
+  color: #000;
+  padding-right: 13px;
+}
+
+.c2 svg {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.c2 .decrement-button {
+  padding-right: 13px;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 31px;
+}
+
+.c3 button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 49%;
+  background-image: none;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.5);
+  font-family: Helvetica,sans-serif;
+  font-size: 18px;
+  line-height: 1.03;
+  color: #fff;
+}
+
+.c3 .pick-up-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 .pick-up {
+  background-color: #000;
+  border-color: #000;
+}
+
+.c3 .add-to-cart {
+  background-color: #cc0000;
+  border-color: #cc0000;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.c4 .returns-label {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 20px;
+  line-height: 0.9;
+  color: #666;
+  padding-right: 15px;
+}
+
+.c4 .returns-description {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #666;
+  padding-left: 14px;
+}
+
+.c4 hr {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  height: 20px;
+  color: #ccc;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 13px;
+}
+
+.c5 .social-button {
+  padding-top: 4px;
+  padding-bottom: 5px;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  background-color: #f3f3f3;
+  color: #333333;
+  border: none;
+  width: 32%;
+}
+
 <section
-  className="sc-bdVaJa llzKXe"
+  className="c0"
 >
   <form
-    className="sc-bwzfXH jwfMIB"
+    className="c1"
   >
     <div
-      className="sc-htpNat cXcQOz"
+      className="c2"
     >
       <label
         className="quantity-label"
@@ -27,11 +206,11 @@ exports[`snapshot 1`] = `
       </div>
     </div>
     <div
-      className="sc-bxivhb cmTQFS"
+      className="c3"
     />
   </form>
   <div
-    className="sc-ifAKCX uVQDR"
+    className="c4"
   >
     <p
       className="returns-label"
@@ -46,7 +225,7 @@ exports[`snapshot 1`] = `
     </p>
   </div>
   <div
-    className="sc-EHOje jYbYEx"
+    className="c5"
   >
     <button
       className="social-button"

@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">76.92% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/13</span>
+        <span class='fraction'>13/13</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">20% </span>
+        <span class="strong">90% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/10</span>
+        <span class='fraction'>9/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">40% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/5</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">76.92% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/13</span>
+        <span class='fraction'>13/13</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -166,33 +166,35 @@
 121
 122
 123
-124</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+124
+125
+126</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -230,8 +232,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -257,7 +259,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -303,6 +307,7 @@ class Reviews extends React.Component {
     newDate = `${month} ${day}, ${year}`;
     return newDate;
   };
+&nbsp;
   render() {
     const { reviews } = this.props;
     const starsArray = [1, 2, 3, 4, 5];
@@ -310,11 +315,11 @@ class Reviews extends React.Component {
     return (
       &lt;Styled.ReviewSection&gt;
         {reviews &amp;&amp; (
-<span class="branch-1 cbranch-no" title="branch not covered" >          &lt;Styled.ReviewHeading&gt;</span>
+          &lt;Styled.ReviewHeading&gt;
             &lt;div className="ratings-stars-container"&gt;
               &lt;div className="ratings-stars"&gt;
-                {starsArray.map(<span class="fstat-no" title="function not covered" >nu</span>m =&gt;
-<span class="cstat-no" title="statement not covered" >                  num &lt;= parseInt(reviews.consolidatedOverallRating) ? (</span>
+                {starsArray.map(num =&gt;
+                  num &lt;= parseInt(reviews.consolidatedOverallRating) ? (
                     &lt;FontAwesomeIcon
                       key={num}
                       icon="star"
@@ -337,7 +342,7 @@ class Reviews extends React.Component {
           &lt;/Styled.ReviewHeading&gt;
         )}
         {reviews &amp;&amp; (
-<span class="branch-1 cbranch-no" title="branch not covered" >          &lt;Styled.ReviewMain&gt;</span>
+          &lt;Styled.ReviewMain&gt;
             &lt;div className="review-main-heading"&gt;
               &lt;div className="pro-con"&gt;
                 &lt;p&gt;PRO&lt;/p&gt;
@@ -352,15 +357,16 @@ class Reviews extends React.Component {
             &lt;Styled.ProConReviewContainer&gt;
               &lt;Styled.Review&gt;
                 &lt;div className="ratings-stars"&gt;
-                  {starsArray.map(<span class="fstat-no" title="function not covered" >nu</span>m =&gt;
-<span class="cstat-no" title="statement not covered" >                    num &lt;= parseInt(reviews.Pro[0].overallRating) ? (</span>
+                  {starsArray.map(num =&gt;
+                    num &lt;= parseInt(reviews.Pro[0].overallRating) ? (
                       &lt;FontAwesomeIcon
+                        data-testid={`rendered-star`}
                         key={num}
                         icon="star"
                         className="icon-star active"
                       /&gt;
                     ) : (
-                      &lt;FontAwesomeIcon
+<span class="branch-1 cbranch-no" title="branch not covered" >                      &lt;FontAwesomeIcon</span>
                         key={num}
                         icon="star"
                         className="icon-star"
@@ -379,8 +385,8 @@ class Reviews extends React.Component {
               &lt;/Styled.Review&gt;
               &lt;Styled.Review&gt;
                 &lt;div className="ratings-stars"&gt;
-                  {starsArray.map(<span class="fstat-no" title="function not covered" >nu</span>m =&gt;
-<span class="cstat-no" title="statement not covered" >                    num &lt;= parseInt(reviews.Con[0].overallRating) ? (</span>
+                  {starsArray.map(num =&gt;
+                    num &lt;= parseInt(reviews.Con[0].overallRating) ? (
                       &lt;FontAwesomeIcon
                         key={num}
                         icon="star"
@@ -418,7 +424,7 @@ export default Reviews;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Dec 29 2018 19:40:02 GMT-0600 (CST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Dec 30 2018 15:36:36 GMT-0600 (CST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
