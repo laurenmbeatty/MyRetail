@@ -2,7 +2,7 @@ import React from "react";
 import { create } from "react-test-renderer";
 import { render, cleanup } from "react-testing-library";
 import "jest-styled-components";
-import Offers from "../components/offers/Offers";
+import Offers from "./Offers";
 
 afterEach(cleanup);
 

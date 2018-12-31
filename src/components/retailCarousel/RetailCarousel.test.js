@@ -4,7 +4,7 @@ import { render, cleanup, fireEvent } from "react-testing-library";
 import "jest-styled-components";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";
-import RetailCarousel from "../components/retailCarousel/RetailCarousel";
+import RetailCarousel from "./RetailCarousel";
 
 library.add(faSearchPlus);
 

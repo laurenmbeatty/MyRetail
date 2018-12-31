@@ -5,7 +5,7 @@ import "jest-styled-components";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 library.add(faStar);
-import Reviews from "../components/reviews/Reviews";
+import Reviews from "./Reviews";
 
 afterEach(cleanup);
 

@@ -4,7 +4,7 @@ import { render, cleanup, fireEvent } from "react-testing-library";
 import "jest-styled-components";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMinusCircle, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
-import Order from "../components/order/Order";
+import Order from "./Order";
 
 library.add(faMinusCircle, faPlusCircle);
 
