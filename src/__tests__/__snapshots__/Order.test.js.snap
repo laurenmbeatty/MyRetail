@@ -198,11 +198,45 @@ exports[`snapshot 1`] = `
       <div
         className="counter-container"
       >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-minus-circle fa-w-16 decrement-button"
+          data-icon="minus-circle"
+          data-prefix="fas"
+          onClick={[Function]}
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zM124 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H124z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
         <span
           className="quantity"
         >
           1
         </span>
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-plus-circle fa-w-16 increment-button"
+          data-icon="plus-circle"
+          data-prefix="fas"
+          onClick={[Function]}
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
       </div>
     </div>
     <div

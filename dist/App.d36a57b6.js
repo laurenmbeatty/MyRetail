@@ -43195,9 +43195,9 @@ function (_React$Component) {
             onClick: _this2.handleImageClick,
             src: image.image,
             key: index,
+            "data-testid": "carousel-image-".concat(index),
             index: index,
             value: index,
-            "data-testid": "carousel-image-".concat(index),
             alt: "ninja-blender-".concat(index + 1),
             className: slideIndex === index ? "chosen" : ""
           })
@@ -43691,7 +43691,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  margin-bottom: 30px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -44100,7 +44100,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53546" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62506" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

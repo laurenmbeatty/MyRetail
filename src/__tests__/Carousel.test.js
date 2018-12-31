@@ -1,6 +1,5 @@
 import React from "react";
 import { create } from "react-test-renderer";
-import { mount } from "enzyme";
 import { render, cleanup, fireEvent } from "react-testing-library";
 import "jest-styled-components";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -9,36 +8,45 @@ import RetailCarousel from "../components/carousel/RetailCarousel";
 
 library.add(faSearchPlus);
 
+afterEach(cleanup);
+
 test("snapshot", () => {
   const c = create(<RetailCarousel />);
   expect(c.toJSON()).toMatchSnapshot();
 });
 
-describe("<RetailCarousel />", () => {
-  it("renders with props", () => {
-    const props = {
-      images: [{ image: "url" }, { image: "url" }]
-    };
+it("renders with props", () => {
+  const props = {
+    images: [{ image: "url", index: 0 }, { image: "url", index: 1 }]
+  };
 
-    const wrapper = mount(<RetailCarousel images={props.images} />);
+  const { getByTestId } = render(<RetailCarousel images={props.images} />);
 
-    expect(wrapper.props()).toEqual({
-      images: [{ image: "url" }, { image: "url" }]
-    });
-  });
+  const carousel = getByTestId("carousel-image-0");
+
+  expect(carousel).toBeDefined();
 });
 
-// afterEach(cleanup);
+test("fires handleimageclick", () => {
+  const handleImageClick = jest.fn();
+  // const props = {
+  //   images: [{ image: "url-0", index: 0 }, { image: "url-1", index: 1 }]
+  // };
+  const { container } = render(
+    /* eslint-disable-next-line */
+    <img
+      src="http://target.scene7.com/is/image/Target/14263758_Alt06"
+      onClick={handleImageClick}
+      index="6"
+      value="6"
+      data-testid="carousel-image-6"
+      alt="ninja-blender-7"
+      className="chosen"
+      aria-hidden="false"
+      tabIndex="0"
+    />
+  );
 
-// test("fires handleimageclick", () => {
-//   const handleImageClick = jest.fn();
-//   const props = {
-//     images: [{ image: "url-0", index: 0 }, { image: "url-1", index: 1 }]
-//   };
-//   const { getByTestId } = render(
-//     <RetailCarousel {...props} onClick={handleImageClick} slideIndex={0} />
-//   );
-
-//   fireEvent.click(getByTestId(".carousel-image-0"));
-//   expect(handleImageClick).toHaveBeenCalledTimes(1);
-// });
+  fireEvent.click(container.firstChild);
+  expect(handleImageClick).toHaveBeenCalledTimes(1);
+});
