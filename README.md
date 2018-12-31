@@ -16,8 +16,12 @@
 
 ### Easy Deploy!
 
-- Anytime you push to github, the project is set up to build, and then deploy to surge!
-  `
+- Anytime you push to github, the project is set up to build, and then deploy to surge. I set up this process via a git hook.
+
+For a more complex project, with lots of team members, we could integrate automatic linting and testing that runs anytime someone tries to push to github (or gitlab, or BitBucket, etc.). We could set it up to cancel the push to the remote branch if linting or tests failed. This would save time for everyone, especially developers, and having automated linting and testing would guarantee clean, uniform standards, without developers having to necessarily have the exact same IDE or set-up. Although I haven't used it personally, I hear that [Husky](https://github.com/typicode/husky) is a nice choice for this kind of process.
+
+When code gets pushed to the remote repository, it could build a feature branch, OR, it could be set up to build a feature branch only when a pull request is submitted. This build process would run integration tests, as well.
+`
 
 ### Tech Stack
 
