@@ -13,7 +13,7 @@
     "test:coverage": "jest --silent --coverage",
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "deploy": "npm run build  && surge dist lauren-target.surge.sh"
+    "deploy": "npm run build  && surge dist my-retail.surge.sh"
   },
   "author": "Lauren Beatty",
   "license": "ISC",
