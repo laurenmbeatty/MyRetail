@@ -43057,7 +43057,7 @@ exports.default = _default;
 module.exports = "/ArrowLeft.99d86069.png";
 },{}],"../public/images/ArrowRight.png":[function(require,module,exports) {
 module.exports = "/ArrowRight.0c847330.png";
-},{}],"components/carousel/styles.js":[function(require,module,exports) {
+},{}],"components/retailCarousel/styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43102,7 +43102,7 @@ exports.CarouselArea = CarouselArea;
 var MainImage = _styledComponents.default.img(_templateObject2());
 
 exports.MainImage = MainImage;
-},{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../public/images/ArrowLeft.png":"../public/images/ArrowLeft.png","../../../public/images/ArrowRight.png":"../public/images/ArrowRight.png"}],"components/carousel/RetailCarousel.js":[function(require,module,exports) {
+},{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../public/images/ArrowLeft.png":"../public/images/ArrowLeft.png","../../../public/images/ArrowRight.png":"../public/images/ArrowRight.png"}],"components/retailCarousel/RetailCarousel.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43211,7 +43211,7 @@ function (_React$Component) {
 
 var _default = RetailCarousel;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","nuka-carousel":"../node_modules/nuka-carousel/es/index.js","@fortawesome/react-fontawesome":"../node_modules/@fortawesome/react-fontawesome/index.es.js","./styles":"components/carousel/styles.js"}],"components/highlights/styles.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","nuka-carousel":"../node_modules/nuka-carousel/es/index.js","@fortawesome/react-fontawesome":"../node_modules/@fortawesome/react-fontawesome/index.es.js","./styles":"components/retailCarousel/styles.js"}],"components/highlights/styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43966,7 +43966,7 @@ var _freeSolidSvgIcons = require("@fortawesome/free-solid-svg-icons");
 
 var _itemData = _interopRequireDefault(require("./item-data"));
 
-var _RetailCarousel = _interopRequireDefault(require("./components/carousel/RetailCarousel"));
+var _RetailCarousel = _interopRequireDefault(require("./components/retailCarousel/RetailCarousel"));
 
 var _Highlights = _interopRequireDefault(require("./components/highlights/Highlights"));
 
@@ -44073,7 +44073,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 (0, _reactDom.render)(_react.default.createElement(App, null), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","@fortawesome/fontawesome-svg-core":"../node_modules/@fortawesome/fontawesome-svg-core/index.es.js","@fortawesome/free-solid-svg-icons":"../node_modules/@fortawesome/free-solid-svg-icons/index.es.js","./item-data":"item-data.js","./components/carousel/RetailCarousel":"components/carousel/RetailCarousel.js","./components/highlights/Highlights":"components/highlights/Highlights.js","./components/offers/Offers":"components/offers/Offers.js","./components/order/Order":"components/order/Order.js","./components/reviews/Reviews":"components/reviews/Reviews.js","./styles":"styles.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","@fortawesome/fontawesome-svg-core":"../node_modules/@fortawesome/fontawesome-svg-core/index.es.js","@fortawesome/free-solid-svg-icons":"../node_modules/@fortawesome/free-solid-svg-icons/index.es.js","./item-data":"item-data.js","./components/retailCarousel/RetailCarousel":"components/retailCarousel/RetailCarousel.js","./components/highlights/Highlights":"components/highlights/Highlights.js","./components/offers/Offers":"components/offers/Offers.js","./components/order/Order":"components/order/Order.js","./components/reviews/Reviews":"components/reviews/Reviews.js","./styles":"styles.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -44100,7 +44100,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62506" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55098" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

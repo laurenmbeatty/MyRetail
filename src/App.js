@@ -9,7 +9,7 @@ import {
   faMinusCircle
 } from "@fortawesome/free-solid-svg-icons";
 import productData from "./item-data";
-import RetailCarousel from "./components/carousel/RetailCarousel";
+import RetailCarousel from "./components/retailCarousel/RetailCarousel";
 import Highlights from "./components/highlights/Highlights";
 import Offers from "./components/offers/Offers";
 import Order from "./components/order/Order";

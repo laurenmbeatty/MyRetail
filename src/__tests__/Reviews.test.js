@@ -14,7 +14,7 @@ test("snapshot", () => {
   expect(c.toJSON()).toMatchSnapshot();
 });
 
-test("Parses date Correctly", () => {
+test("it parses date Correctly", () => {
   const c = create(<Reviews manipulateDate={() => {}} />);
   const instance = c.getInstance();
   const testDate = "Mon Mar 11 13:13:55 UTC 2013";

@@ -4,7 +4,7 @@ import { render, cleanup, fireEvent } from "react-testing-library";
 import "jest-styled-components";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";
-import RetailCarousel from "../components/carousel/RetailCarousel";
+import RetailCarousel from "../components/retailCarousel/RetailCarousel";
 
 library.add(faSearchPlus);
 
@@ -29,9 +29,6 @@ it("renders with props", () => {
 
 test("fires handleimageclick", () => {
   const handleImageClick = jest.fn();
-  // const props = {
-  //   images: [{ image: "url-0", index: 0 }, { image: "url-1", index: 1 }]
-  // };
   const { container } = render(
     /* eslint-disable-next-line */
     <img
@@ -43,7 +40,6 @@ test("fires handleimageclick", () => {
       alt="ninja-blender-7"
       className="chosen"
       aria-hidden="false"
-      tabIndex="0"
     />
   );
 
