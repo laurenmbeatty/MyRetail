@@ -13,7 +13,7 @@
     "test:coverage": "jest --silent --coverage",
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "deploy": "npm run build  && surge dist my-retail.surge.sh"
+    "deploy": "npm run build  && surge dist lauren-target.surge.sh"
   },
   "author": "Lauren Beatty",
   "license": "ISC",
@@ -41,6 +41,7 @@
     "jest-styled-components": "^6.3.1",
     "nuka-carousel": "^4.4.4",
     "parcel-bundler": "^1.10.3",
+    "parcel-plugin-compress": "^1.0.6",
     "prettier": "^1.15.2",
     "react-test-renderer": "^16.6.3",
     "react-testing-library": "^5.4.2",
