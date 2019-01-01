@@ -1,6 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Styled from "./styles";
+import { Link } from "@reach/router";
+
 class Reviews extends React.Component {
   manipulateDate = info => {
     let newDate = "";
@@ -41,9 +43,9 @@ class Reviews extends React.Component {
               </div>
               <span className="ratings-label">overall</span>
             </div>
-            <a href="/" className="view-all-ratings">
+            <Link to={`/reviewDetail`} className="view-all-ratings">
               view all {reviews.totalReviews} reviews
-            </a>
+            </Link>
           </Styled.ReviewHeading>
         )}
         {reviews && (
