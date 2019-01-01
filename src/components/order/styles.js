@@ -15,6 +15,9 @@ export const Order = styled.section`
     display: inline-block;
     width: 50%;
     text-align: center;
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
   }
 `;
 
@@ -58,6 +61,9 @@ export const OrderButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 31px;
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
   button {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -69,6 +75,9 @@ export const OrderButtonContainer = styled.div`
     font-size: 18px;
     line-height: 1.03;
     color: #fff;
+    @media screen and (max-width: 500px) {
+      width: 100%;
+    }
   }
   .pick-up-container {
     display: flex;
@@ -77,6 +86,9 @@ export const OrderButtonContainer = styled.div`
   .pick-up {
     background-color: #000;
     border-color: #000;
+    @media screen and (max-width: 500px) {
+      margin-bottom: 10px;
+    }
   }
   .add-to-cart {
     background-color: #cc0000;
@@ -120,5 +132,12 @@ export const SocialButtonContainer = styled.div`
     color: #333333;
     border: none;
     width: 32%;
+    @media screen and (max-width: 500px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
   }
 `;

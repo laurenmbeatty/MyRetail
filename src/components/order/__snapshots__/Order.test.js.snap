@@ -180,6 +180,47 @@ exports[`snapshot 1`] = `
   width: 32%;
 }
 
+@media screen and (max-width:500px) {
+  .c0 .find-in-store {
+    display: none;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .c3 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .c3 button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .c3 .pick-up {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .c5 .social-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .c5 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 <section
   className="c0"
 >
