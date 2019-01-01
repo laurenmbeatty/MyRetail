@@ -20,6 +20,7 @@ export const Main = styled.div`
   max-width: 1200px;
   margin: 100px auto 0 auto;
   display: flex;
+  justify-content: center;
   background-color: #fff;
   @media screen and (max-width: 1200px) {
     flex-direction: column;
@@ -28,7 +29,7 @@ export const Main = styled.div`
 
 export const ColOne = styled.div`
   width: 40%;
-  margin-right: 30px;
+  margin-right: 2.5%;
   @media screen and (max-width: 1200px) {
     width: 100%;
     margin: 0 auto;
