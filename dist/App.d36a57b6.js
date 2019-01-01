@@ -44030,7 +44030,12 @@ function (_React$Component) {
 
     return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(App)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
       loading: true,
-      productData: _itemData.default
+      productData: _itemData.default,
+      windowWidth: 1
+    }, _this.updateDimensions = function () {
+      _this.setState({
+        windowWidth: window.innerWidth
+      });
     }, _temp));
   }
 
@@ -44039,16 +44044,23 @@ function (_React$Component) {
     value: function componentDidMount() {
       this.setState({
         loading: false,
-        productData: _itemData.default.CatalogEntryView[0]
+        productData: _itemData.default.CatalogEntryView[0],
+        windowWidth: window.innerWidth
       });
+      window.addEventListener("resize", this.updateDimensions);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      window.removeEventListener("resize", this.updateDimensions);
     }
   }, {
     key: "render",
     value: function render() {
-      var windowWidth = window.innerWidth;
       var _this$state = this.state,
           productData = _this$state.productData,
-          loading = _this$state.loading;
+          loading = _this$state.loading,
+          windowWidth = _this$state.windowWidth;
       return !loading ? _react.default.createElement(Styled.Main, null, _react.default.createElement(Styled.ColOne, null, _react.default.createElement(Styled.MainTitle, null, productData.title), _react.default.createElement(_RetailCarousel.default, {
         images: [].concat(_toConsumableArray(productData.Images[0].PrimaryImage), _toConsumableArray(productData.Images[0].AlternateImages))
       }), windowWidth > 1199 ? _react.default.createElement(_Reviews.default, {
@@ -44100,7 +44112,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55098" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61282" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

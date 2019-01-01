@@ -19,18 +19,30 @@ import * as Styled from "./styles";
 
 library.add(faSearchPlus, faStar, faTag, faPlusCircle, faMinusCircle);
 class App extends React.Component {
-  state = { loading: true, productData };
+  state = { loading: true, productData, windowWidth: 1 };
+
+  updateDimensions = () => {
+    this.setState({
+      windowWidth: window.innerWidth
+    });
+  };
 
   componentDidMount() {
     this.setState({
       loading: false,
-      productData: productData.CatalogEntryView[0]
+      productData: productData.CatalogEntryView[0],
+      windowWidth: window.innerWidth
     });
+
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
   }
 
   render() {
-    let windowWidth = window.innerWidth;
-    const { productData, loading } = this.state;
+    const { productData, loading, windowWidth } = this.state;
     return !loading ? (
       <Styled.Main>
         <Styled.ColOne>
