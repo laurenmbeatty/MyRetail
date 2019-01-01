@@ -43070,7 +43070,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: block;\n  margin: 0 auto;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: block;\n  margin: 0 auto;\n  @media screen and (max-width: 400px) {\n    width: 100%;\n    height: auto;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -43080,7 +43080,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  margin: 0 auto 25px;\n  .show-larger {\n    margin-top: 67px;\n    display: flex;\n    justify-content: center;\n    color: #999;\n    font-family: Helvetica, sans-serif;\n    margin-bottom: 20px;\n  }\n  .show-larger svg {\n    font-size: 19px;\n    font-weight: lighter;\n    margin-right: 11px;\n    cursor: pointer;\n  }\n  .show-larger p {\n    margin: 0;\n    font-size: 14.5px;\n  }\n  .slider.carousel {\n    width: 220px !important;\n    margin-left: auto;\n    margin-right: auto;\n  }\n  .chosen {\n    border: 1px solid #999;\n  }\n  .slider-control-bottomcenter {\n    display: none;\n  }\n  .slider-control-centerright {\n    right: -60px !important;\n  }\n  .slider-control-centerleft {\n    left: -60px !important;\n  }\n  .slider-control-centerright button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n  .slider-control-centerleft button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0 auto 25px;\n  .show-larger {\n    margin-top: 67px;\n    display: flex;\n    justify-content: center;\n    color: #999;\n    font-family: Helvetica, sans-serif;\n    margin-bottom: 20px;\n  }\n  .show-larger svg {\n    font-size: 19px;\n    font-weight: lighter;\n    margin-right: 11px;\n    cursor: pointer;\n  }\n  .show-larger p {\n    margin: 0;\n    font-size: 14.5px;\n  }\n  .slider.carousel {\n    width: 220px !important;\n    margin-left: auto;\n    margin-right: auto;\n  }\n  .chosen {\n    border: 1px solid #999;\n  }\n  .slider-control-bottomcenter {\n    display: none;\n  }\n  .slider-control-centerright {\n    right: -60px !important;\n    @media screen and (max-width: 400px) {\n      right: -45px !important;\n    }\n  }\n  .slider-control-centerleft {\n    left: -60px !important;\n    @media screen and (max-width: 400px) {\n      left: -45px !important;\n    }\n  }\n  .slider-control-centerright button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n  .slider-control-centerleft button {\n    background: #fff url(", ") no-repeat center !important;\n    color: #fff !important;\n    &:focus {\n      outline: none;\n    }\n    font-size: 0;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -43681,7 +43681,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-end;\n  width: 90%;\n  margin: 0 auto;\n  .ratings-stars-container {\n    display: flex;\n    align-items: flex-end;\n  }\n  .ratings-stars {\n    display: flex;\n  }\n  .ratings-label {\n    padding-left: 8px;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 14px;\n    font-weight: bold;\n    color: #000;\n  }\n  svg.active {\n    font-size: 25px;\n    color: #cc0000;\n  }\n  svg {\n    font-size: 25px;\n    color: #999999;\n  }\n  .view-all-ratings {\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 14px;\n    font-weight: bold;\n    color: #000;\n    text-decoration: none;\n  }\n  @media screen and (max-width: 1200px) {\n    margin-top: 60px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-end;\n  width: 90%;\n  margin: 0 auto;\n  .ratings-stars-container {\n    display: flex;\n    align-items: flex-end;\n  }\n  .ratings-stars {\n    display: flex;\n  }\n  .ratings-label {\n    padding-left: 8px;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 14px;\n    font-weight: bold;\n    color: #000;\n    @media screen and (max-width: 500px) {\n      display: none;\n    }\n  }\n  svg.active {\n    font-size: 25px;\n    color: #cc0000;\n  }\n  svg {\n    font-size: 25px;\n    color: #999999;\n  }\n  .view-all-ratings {\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 14px;\n    font-weight: bold;\n    color: #000;\n    text-decoration: none;\n  }\n  @media screen and (max-width: 1200px) {\n    margin-top: 60px;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -43893,7 +43893,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  width: 41%;\n  @media screen and (max-width: 1200px) {\n    width: 50%;\n    margin: 0 auto;\n    min-width: 470px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 41%;\n  @media screen and (max-width: 1200px) {\n    width: 50%;\n    margin: 0 auto;\n    min-width: 470px;\n  }\n  @media screen and (max-width: 500px) {\n    min-width: 320px;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -43923,7 +43923,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  font-family: Helvetica, sans-serif;\n  font-size: 26px;\n  font-weight: 300;\n  line-height: 1.15;\n  letter-spacing: normal;\n  text-align: center;\n  color: #000000;\n  margin: 0 auto 44px auto;\n  width: 80%;\n  @media screen and (max-width: 1200px) {\n    width: 40%;\n    min-width: 370px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: Helvetica, sans-serif;\n  font-size: 26px;\n  font-weight: 300;\n  line-height: 1.15;\n  letter-spacing: normal;\n  text-align: center;\n  color: #000000;\n  margin: 0 auto 44px auto;\n  width: 80%;\n  @media screen and (max-width: 1200px) {\n    width: 40%;\n    min-width: 320px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -44112,7 +44112,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61227" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63493" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

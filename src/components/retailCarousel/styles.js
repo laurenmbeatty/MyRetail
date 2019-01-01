@@ -35,9 +35,15 @@ export const CarouselArea = styled.section`
   }
   .slider-control-centerright {
     right: -60px !important;
+    @media screen and (max-width: 400px) {
+      right: -45px !important;
+    }
   }
   .slider-control-centerleft {
     left: -60px !important;
+    @media screen and (max-width: 400px) {
+      left: -45px !important;
+    }
   }
   .slider-control-centerright button {
     background: #fff url(${arrowRight}) no-repeat center !important;
@@ -59,4 +65,8 @@ export const CarouselArea = styled.section`
 export const MainImage = styled.img`
   display: block;
   margin: 0 auto;
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    height: auto;
+  }
 `;

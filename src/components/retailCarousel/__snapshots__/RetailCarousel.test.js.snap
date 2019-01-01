@@ -74,6 +74,18 @@ exports[`snapshot 1`] = `
   outline: none;
 }
 
+@media screen and (max-width:400px) {
+  .c0 .slider-control-centerright {
+    right: -45px !important;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .c0 .slider-control-centerleft {
+    left: -45px !important;
+  }
+}
+
 <section
   className="c0"
 >

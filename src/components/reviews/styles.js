@@ -21,6 +21,9 @@ export const ReviewHeading = styled.div`
     font-size: 14px;
     font-weight: bold;
     color: #000;
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
   }
   svg.active {
     font-size: 25px;

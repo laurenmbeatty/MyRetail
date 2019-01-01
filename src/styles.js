@@ -12,7 +12,7 @@ export const MainTitle = styled.h1`
   width: 80%;
   @media screen and (max-width: 1200px) {
     width: 40%;
-    min-width: 370px;
+    min-width: 320px;
   }
 `;
 
@@ -42,6 +42,9 @@ export const ColTwo = styled.div`
     width: 50%;
     margin: 0 auto;
     min-width: 470px;
+  }
+  @media screen and (max-width: 500px) {
+    min-width: 320px;
   }
 `;
 
