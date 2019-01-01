@@ -43467,7 +43467,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  border: 1px solid #d3d2d2;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 5px 8px 5px 11px;\n  width: 45%;\n  .quantity-label {\n    color: #333;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 14px;\n  }\n  .counter-container {\n    display: flex;\n    align-items: center;\n  }\n  .quantity {\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 18px;\n    color: #000;\n    padding-right: 13px;\n  }\n  svg {\n    font-size: 30px;\n    cursor: pointer;\n  }\n  .decrement-button {\n    padding-right: 13px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  border: 1px solid #d3d2d2;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 5px 8px 5px 11px;\n  width: 49%;\n  .quantity-label {\n    color: #333;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 14px;\n  }\n  .counter-container {\n    display: flex;\n    align-items: center;\n  }\n  .quantity {\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 18px;\n    color: #000;\n    padding-right: 13px;\n  }\n  svg {\n    font-size: 30px;\n    cursor: pointer;\n  }\n  .decrement-button {\n    padding-right: 13px;\n  }\n  @media screen and (max-width: 500px) {\n    width: 100%;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -44112,7 +44112,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52439" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56139" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

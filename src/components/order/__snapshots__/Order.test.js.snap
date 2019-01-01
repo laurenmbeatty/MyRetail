@@ -26,6 +26,7 @@ exports[`snapshot 1`] = `
 
 .c2 {
   border: 1px solid #d3d2d2;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,7 +40,7 @@ exports[`snapshot 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 5px 8px 5px 11px;
-  width: 45%;
+  width: 49%;
 }
 
 .c2 .quantity-label {
@@ -183,6 +184,12 @@ exports[`snapshot 1`] = `
 @media screen and (max-width:500px) {
   .c0 .find-in-store {
     display: none;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .c2 {
+    width: 100%;
   }
 }
 

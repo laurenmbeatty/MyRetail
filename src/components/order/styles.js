@@ -27,11 +27,12 @@ export const OrderForm = styled.form`
 
 export const Quantity = styled.div`
   border: 1px solid #d3d2d2;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 5px 8px 5px 11px;
-  width: 45%;
+  width: 49%;
   .quantity-label {
     color: #333;
     font-family: Arial, Helvetica, sans-serif;
@@ -53,6 +54,9 @@ export const Quantity = styled.div`
   }
   .decrement-button {
     padding-right: 13px;
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
   }
 `;
 
