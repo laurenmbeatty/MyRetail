@@ -1,5 +1,7 @@
 # Welcome to MyRetail!
 
+Find the finished product at [http://my-retail.surge.sh/](http://my-retail.surge.sh/). For a different version using @reach/router to navigate to a page that shows all reviews, go to [http://lauren-target.surge.sh/](http://lauren-target.surge.sh/).
+
 ### Get Started
 
 - `git clone https://github.com/laurenmbeatty/MyRetail.git` - Clone the repository to your machine.

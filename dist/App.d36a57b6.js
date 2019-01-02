@@ -43810,7 +43810,7 @@ function (_React$Component) {
       }, "overall")), _react.default.createElement("a", {
         href: "/",
         className: "view-all-ratings"
-      }, "view all ", reviews.totalReviews, " reviews")), reviews && _react.default.createElement(Styled.ReviewMain, null, _react.default.createElement("div", {
+      }, "view all ", reviews.Reviews.length, " reviews")), reviews && _react.default.createElement(Styled.ReviewMain, null, _react.default.createElement("div", {
         className: "review-main-heading"
       }, _react.default.createElement("div", {
         className: "pro-con"
@@ -44112,7 +44112,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56139" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63403" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -42,7 +42,8 @@ class Reviews extends React.Component {
               <span className="ratings-label">overall</span>
             </div>
             <a href="/" className="view-all-ratings">
-              view all {reviews.totalReviews} reviews
+              {/* TODO: Wasn't sure if this should be the total # of Reviews in the data, or the field totalReviews, because they are different */}
+              view all {reviews.Reviews.length} reviews
             </a>
           </Styled.ReviewHeading>
         )}
