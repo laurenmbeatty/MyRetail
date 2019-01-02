@@ -45529,7 +45529,7 @@ function (_React$Component) {
       }, "overall")), _react.default.createElement(_router.Link, {
         to: "/reviewDetail",
         className: "view-all-ratings"
-      }, "view all ", reviews.totalReviews, " reviews")), reviews && _react.default.createElement(Styled.ReviewMain, null, _react.default.createElement("div", {
+      }, "view all ", reviews.Reviews.length, " reviews")), reviews && _react.default.createElement(Styled.ReviewMain, null, _react.default.createElement("div", {
         className: "review-main-heading"
       }, _react.default.createElement("div", {
         className: "pro-con"
@@ -45815,7 +45815,48 @@ function (_React$Component) {
 
 var _default = Product;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","@fortawesome/fontawesome-svg-core":"../node_modules/@fortawesome/fontawesome-svg-core/index.es.js","@fortawesome/free-solid-svg-icons":"../node_modules/@fortawesome/free-solid-svg-icons/index.es.js","../../item-data":"item-data.js","../retailCarousel/RetailCarousel":"components/retailCarousel/RetailCarousel.js","../highlights/Highlights":"components/highlights/Highlights.js","../offers/Offers":"components/offers/Offers.js","../order/Order":"components/order/Order.js","../reviews/Reviews":"components/reviews/Reviews.js","../../styles":"styles.js"}],"components/reviewDetail/ReviewDetail.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@fortawesome/fontawesome-svg-core":"../node_modules/@fortawesome/fontawesome-svg-core/index.es.js","@fortawesome/free-solid-svg-icons":"../node_modules/@fortawesome/free-solid-svg-icons/index.es.js","../../item-data":"item-data.js","../retailCarousel/RetailCarousel":"components/retailCarousel/RetailCarousel.js","../highlights/Highlights":"components/highlights/Highlights.js","../offers/Offers":"components/offers/Offers.js","../order/Order":"components/order/Order.js","../reviews/Reviews":"components/reviews/Reviews.js","../../styles":"styles.js"}],"components/reviewDetail/styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Review = exports.ReviewSection = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin-top: 9px;\n  padding-right: 15px;\n  svg.active {\n    color: #cc0000;\n  }\n  svg {\n    color: #999;\n    font-size: 14px;\n  }\n  .review-title {\n    margin: 0;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 16px;\n    font-weight: bold;\n    line-height: 24px;\n    color: #000;\n  }\n  .review-description {\n    margin-top: 0;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n    line-height: 18px;\n    font-weight: 400;\n    color: #333;\n  }\n  .review-footer {\n    display: flex;\n  }\n  .reviewer {\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n    line-height: 26px;\n    color: #0066cc;\n    padding-right: 3px;\n  }\n  .review-date {\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n    line-height: 26px;\n    color: #333;\n  }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  margin-bottom: 30px;\n  padding: 15px;\n  background-color: #f5f6f5;\n  width: 41%;\n  margin: 0 auto 0 41%;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var ReviewSection = _styledComponents.default.section(_templateObject());
+
+exports.ReviewSection = ReviewSection;
+
+var Review = _styledComponents.default.div(_templateObject2());
+
+exports.Review = Review;
+},{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/reviewDetail/ReviewDetail.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45825,7 +45866,13 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _reactFontawesome = require("@fortawesome/react-fontawesome");
+
 var _itemData = _interopRequireDefault(require("../../item-data"));
+
+var Styled = _interopRequireWildcard(require("./styles"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45847,7 +45894,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-//import * as Styled from "./styles";
 var ProductDetail =
 /*#__PURE__*/
 function (_React$Component) {
@@ -45869,6 +45915,14 @@ function (_React$Component) {
     return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ProductDetail)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
       loading: true,
       productData: _itemData.default
+    }, _this.manipulateDate = function (info) {
+      var newDate = "";
+      var month = info.slice(4, 7);
+      info = new Date(info);
+      var year = info.getFullYear();
+      var day = info.getDate();
+      newDate = "".concat(month, " ").concat(day, ", ").concat(year);
+      return newDate;
     }, _temp));
   }
 
@@ -45877,16 +45931,47 @@ function (_React$Component) {
     value: function componentDidMount() {
       this.setState({
         loading: false,
-        productData: _itemData.default.CatalogEntryView[0]
+        mainData: _itemData.default.CatalogEntryView[0],
+        reviews: _itemData.default.CatalogEntryView[0].CustomerReview[0].Reviews
       });
     }
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var _this$state = this.state,
           loading = _this$state.loading,
-          productData = _this$state.productData;
-      return !loading ? _react.default.createElement("div", null, _react.default.createElement("pre", null, JSON.stringify(productData.CustomerReview[0].Reviews))) : null;
+          reviews = _this$state.reviews;
+      var starsArray = [1, 2, 3, 4, 5];
+      return !loading ? _react.default.createElement("div", null, _react.default.createElement(Styled.ReviewSection, null, reviews && reviews.map(function (review, index) {
+        return _react.default.createElement(Styled.Review, {
+          key: index
+        }, _react.default.createElement("div", {
+          className: "ratings-stars"
+        }, starsArray.map(function (num) {
+          return num <= parseInt(review.overallRating) ? _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
+            "data-testid": "rendered-star",
+            key: num,
+            icon: "star",
+            className: "icon-star active"
+          }) : _react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
+            key: num,
+            icon: "star",
+            className: "icon-star"
+          });
+        })), _react.default.createElement("h3", {
+          className: "review-title"
+        }, review.title), _react.default.createElement("p", {
+          className: "review-description"
+        }, review.review), _react.default.createElement("div", {
+          className: "review-footer"
+        }, _react.default.createElement("span", {
+          className: "reviewer"
+        }, review.screenName), _react.default.createElement("span", {
+          className: "review-date"
+        }, _this2.manipulateDate(review.datePosted))));
+      }))) : null;
     }
   }]);
 
@@ -45895,7 +45980,7 @@ function (_React$Component) {
 
 var _default = ProductDetail;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../../item-data":"item-data.js"}],"App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@fortawesome/react-fontawesome":"../node_modules/@fortawesome/react-fontawesome/index.es.js","../../item-data":"item-data.js","./styles":"components/reviewDetail/styles.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -45988,7 +46073,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58862" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60006" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

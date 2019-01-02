@@ -44,7 +44,7 @@ class Reviews extends React.Component {
               <span className="ratings-label">overall</span>
             </div>
             <Link to={`/reviewDetail`} className="view-all-ratings">
-              view all {reviews.totalReviews} reviews
+              view all {reviews.Reviews.length} reviews
             </Link>
           </Styled.ReviewHeading>
         )}
