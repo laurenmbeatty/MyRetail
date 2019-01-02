@@ -45838,7 +45838,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  margin-bottom: 30px;\n  padding: 15px;\n  background-color: #f5f6f5;\n  width: 41%;\n  margin: 0 auto 0 41%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  margin-bottom: 30px;\n  padding: 15px;\n  background-color: #f5f6f5;\n  width: 60%;\n  margin: 0 auto;\n  @media screen and (max-width: 768px) {\n    width: 95%;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -46073,7 +46073,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60006" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61658" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

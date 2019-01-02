@@ -5,8 +5,11 @@ export const ReviewSection = styled.section`
   margin-bottom: 30px;
   padding: 15px;
   background-color: #f5f6f5;
-  width: 41%;
-  margin: 0 auto 0 41%;
+  width: 60%;
+  margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    width: 95%;
+  }
 `;
 
 export const Review = styled.div`
