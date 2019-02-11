@@ -33269,19 +33269,19 @@ var productData = {
     DPCI: "072-04-1840",
     Images: [{
       AlternateImages: [{
-        image: "http://target.scene7.com/is/image/Target/14263758_Alt01"
+        image: "http://target.scene7.com/is/image/Target/14263758"
       }, {
-        image: "http://target.scene7.com/is/image/Target/14263758_Alt02"
+        image: "http://target.scene7.com/is/image/Target/14263758"
       }, {
-        image: "http://target.scene7.com/is/image/Target/14263758_Alt03"
+        image: "http://target.scene7.com/is/image/Target/14263758"
       }, {
-        image: "http://target.scene7.com/is/image/Target/14263758_Alt04"
+        image: "http://target.scene7.com/is/image/Target/14263758"
       }, {
-        image: "http://target.scene7.com/is/image/Target/14263758_Alt05"
+        image: "http://target.scene7.com/is/image/Target/14263758"
       }, {
-        image: "http://target.scene7.com/is/image/Target/14263758_Alt06"
+        image: "http://target.scene7.com/is/image/Target/14263758"
       }, {
-        image: "http://target.scene7.com/is/image/Target/14263758_Alt07"
+        image: "http://target.scene7.com/is/image/Target/14263758"
       }],
       PrimaryImage: [{
         image: "http://target.scene7.com/is/image/Target/14263758"
@@ -44112,7 +44112,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63403" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58047" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

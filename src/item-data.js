@@ -432,25 +432,25 @@ const productData = {
         {
           AlternateImages: [
             {
-              image: "http://target.scene7.com/is/image/Target/14263758_Alt01"
+              image: "http://target.scene7.com/is/image/Target/14263758"
             },
             {
-              image: "http://target.scene7.com/is/image/Target/14263758_Alt02"
+              image: "http://target.scene7.com/is/image/Target/14263758"
             },
             {
-              image: "http://target.scene7.com/is/image/Target/14263758_Alt03"
+              image: "http://target.scene7.com/is/image/Target/14263758"
             },
             {
-              image: "http://target.scene7.com/is/image/Target/14263758_Alt04"
+              image: "http://target.scene7.com/is/image/Target/14263758"
             },
             {
-              image: "http://target.scene7.com/is/image/Target/14263758_Alt05"
+              image: "http://target.scene7.com/is/image/Target/14263758"
             },
             {
-              image: "http://target.scene7.com/is/image/Target/14263758_Alt06"
+              image: "http://target.scene7.com/is/image/Target/14263758"
             },
             {
-              image: "http://target.scene7.com/is/image/Target/14263758_Alt07"
+              image: "http://target.scene7.com/is/image/Target/14263758"
             }
           ],
           PrimaryImage: [
